@@ -43,19 +43,19 @@
       </p>
       <button hidden>call me on *insert number here*</button>
       
-      <form action="contact.php" method="POST">
-        <div class="Reason">
+      <form action="send_email.php" method="POST">
+        <div class="subject">
         <label>Reason for Contact:</label>
         <div>
-          <input type="radio" id="meeting" name="reason" value="meeting">
+          <input type="radio" id="meeting" name="subject" value="meeting" checked>
           <label for="meeting">Schedule Meeting</label>
         </div>
         <div>
-          <input type="radio" id="quote" name="reason" value="quote">
+          <input type="radio" id="quote" name="subject" value="quote">
           <label for="quote">Request A Quote</label>
         </div>
         <div>
-          <input type="radio" id="hello" name="reason" value="hello">
+          <input type="radio" id="hello" name="subject" value="hello">
           <label for="hello">Say Hello</label>
         </div>
       </div>
