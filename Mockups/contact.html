@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+2
+<body>
+    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+    <nav>
+        <!-- icon to click on -->
+
+        <!-- hidden side bar -->
+
+    </nav>
+    <!-- header (cool title screen) -->
+    <section class="section">
+        <h1>Contact</h1>
+        <form action="send_email.php" method="POST" class="contact">
+            <div class="subject">
+                <div>
+                    <input type="radio" name="subject" id="meeting" value="meeting">
+                    <label for="meeting">Schedule Meeting</label>
+                </div>
+                <div>
+                    <input type="radio" name="subject" id="quote" value="quote">
+                    <label for="quote">Request A Quote</label>
+                </div>
+                <div>
+                    <input type="radio" name="subject" id="hello" value="hello">
+                    <label for="hello">Say Hello</label>
+                </div>
+            </div>
+            <div class="information">
+                <div class="first">
+                    <input type="text" name="first" id="first">
+                    <label for="first">First Name</label>
+                    <!-- validate text -->
+                </div>
+                <div class="last">
+                    <input type="text" name="last" id="last">
+                    <label for="last">Last Name</label>
+                    <!-- validate text -->
+                </div>
+                <div class="email">
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email Address</label>
+                    <!-- validate the email address -->
+                </div>
+                <div class="phone">
+                    <!-- add number type drop down menu (+61) -->
+                    <input type="text" name="phone" id="phone">
+                    <label for="phone">Phone Number</label>
+                    <!-- validate the phone number -->
+                </div>
+                <div class="budget">
+                    <input type="number" name="budget" id="budget">
+                    <label for="budget">Budget</label>
+                </div>
+                <div class="schedule">
+                    <input type="datetime-local" name="schedule" id="schedule">
+                    <label for="schedule">Preferred Time</label>
+                </div>
+                <div class="message">
+                    <textarea name="message" id="message">
+                        Enter text here...
+                    </textarea>
+                    <label for="message">Message</label>
+                </div>
+                
+            </div>
+        </form>
+    </section>
+    <!-- footer CTA (contact us now!) -->
+    <footer>
+        <h1>Footer</h1>
+        <!-- button to CTA -->
+
+        <!-- socials -->
+
+    </footer>
+</body>
+
+</html>

@@ -43,11 +43,14 @@ h1{
   }
 }
 
+header, footer{
+  background-color: #152428;
+  color: #DEE2E7;
+}
+
 .title{
   align-items: center;
   justify-content: center;
-  background-color: #152428;
-  color: #DEE2E7;
   text-align: center;
 }
 
@@ -84,4 +87,35 @@ h1{
 
 .showreel:hover .showreel-video{
   /* what to do when hovering over video... */
+}
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0% 10%;
+}
+/* .information{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/* .schedule, .budget{
+  display: none;
+} */
+
+/* input:checked ~ label{
+  color: red;
+} */
+
+.contact #meeting:checked{
+  color: red;
+}
+
+.contact #quote:checked ~ label{
+  color: red;
+}
+
+.contact #hello:checked ~ label{
+  color: red;
 }
