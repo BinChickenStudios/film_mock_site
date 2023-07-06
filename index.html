@@ -1,139 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | MOCK SITE</title>
+    <title>Mockup</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <script defer src="app.js"></script>
+
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><span>Cine Manuel</span></a>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-btn">
-                <img src="burger.png" alt="burger icon">
-            </button>
-            <!--the selection of the drop down menu-->
-            <div id="lightbox" class="lightbox">
-                <div class="lightbox-content">
-                    <a href="showcase.html">Showcase</a>
-                    <a href="About.html">Meet the team</a>
-                    <a href="contact.html">Contact us</a>
-                    <!-- Add more page links as needed -->
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="scrollbar"></div>
-    <div class="content">
-        <section>
-            <h2 hidden>Title section</h2>
-            <p hidden>awesome title screen (company name)
-                this can be super duper animated
-                it is just supposed to look cool... they can scroll down to see more
-                (maybe add a button that scrolls them down automatically)</p>
-                
-                <header>
-                    <div class="title-slice">
-                        <div class="title-top-slice">MOCK SITE</div>
-                        <div class="title-bottom-slice">MOCK SITE</div>
-                    </div>
-                </header>
-            </section>
-            <section>
-                <h2 hidden>SHOW REEL SECTION</h2>
-                <p hidden>play the showreel... stretch to width of screen (16/9 ratio)</p>
-                <div class="video-container">
-                    <!-- youtube video embed
-                        <iframe
-                        src="https://www.youtube.com/embed/XHs7anLwjEc?autoplay=1&mute=1&controls=0&showinfo=0&loop=true"
-                        allow="autoplay"></iframe>
-                    -->
-                    <video autoplay muted loop>
-                        <source src="showreel.mp4" type="video/mp4">
-                        <!-- Provide fallback content in case the browser doesn't support HTML5 video -->
-                        <p>Your browser does not support HTML5 video.</p>
-                    </video>
-                    
-                    
-            </div>
-
-        </section>
-        <section>
-            <h2 hidden>SYNOPSIS SECTION</h2>
-            <p> MOCK SITE is a prestigious film company known for its meticulous craftsmanship, methodical approach,
-                and unwavering commitment to excellence in cinematography and film production. With a blend of technical
-                mastery and artistic finesse, we offer a comprehensive range of services including breathtaking
-                cinematography, meticulous pre-production planning, script development, casting, set design, and
-                post-production editing. Our unwavering dedication to realizing the director's vision ensures that every
-                project we undertake becomes a stunning reality, leaving an indelible mark on the cinematic landscape.
-            </p>
-        </section>
-    
-        <!-- 2 other sections that may not be as important atm   
-            <section>
-                <h2 hidden>WORK SECTION</h2>
-                <p hidden>- collage of videos which can be clicked on (opens youtube view... iframe?)</p>
-            </section>
-        -->
-        <section>
-            <div class="brand_slider">
-                <div class="brand_slide-track">
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-akatsuki-48.png" alt="akatsuki"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-boruto-uzumaki-48.png" alt="boruto"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-gara-48.png" alt="gara"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-haruno-sakura-48.png" alt="sakura"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-hinata-48.png" alt="hinata"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-itachi-uchiha-48.png" alt="itachi"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-kakashi-hatake-48.png" alt="kakashi"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-naruto-48.png" alt="naruto"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-naruto-sign-48.png" alt="hidden leaf"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-sharingan-48.png" alt="sharingan"/>
-                    </div>
-                    <div class="brand_slide">
-                        <img width="48" height="48" src="brands\icons8-tsunade-48.png" alt="tsunade"/>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+    <nav>
+        <!-- icon to click on -->
+        <a href="contact.html"><button id="contact-button">Contact Us</button></a>
         
-    </div>
-    <footer class="footer">
-        <div class="contact-info">
-            <h3>Contact Information</h3>
-            <ul>
-                <li><i class="fas fa-phone"></i> *insert number here*</li>
-                <li><i class="fas fa-envelope"></i> *insert email here*</li>
-            </ul>
-        </div>
-        <div class="copyright">2023 MOCK SITE All rights reserved.</div>
+        <!-- hidden side bar -->
+        
+    </nav>
+    <!-- header (cool title screen) -->
+    <header class="title">
+        
+        <!-- feature title screen... maybe cool animation -->
+        <h1>
+            <span class="title-text">We Are</span> 
+            <br>
+            <span class="title-name" id="changing-text">Cine Manuel</span>
+        </h1>
+        
+    </header>
+    <!-- scroll down has smooth cool animation -->
+    
+    <!-- interactive showreel? cool warping effects? -->
+    <section class="showreel">
+        <h1>Show Reel</h1>
+        <!-- 16/9 video that the user can interact with but controlled -->
+        <video class="showreel-video" style="pointer-events: none;" disablePictureInPicture controlsList="nodownload" autoplay muted loop>
+            <source src="../showreel.mp4" type="video/mp4">
+        </video>
+        
+    </section>
+    
+    <section class="gallary">
+        <h1>Gallary</h1>
+        <!-- link them out to check out gallary -->
+    </section>
+
+    <!-- show off with about me section... flippable cards? carosel? -->
+    <section class="about">
+        <h1>About</h1>
+        <!-- scroll / film reeling where they can show more by dragging down -->
+    </section>
+    <!-- brands slider -->
+    <section class="brand">
+        <h1>Brands</h1>
+        <!-- brand slider -->
+        
+    </section>
+    <!-- footer CTA (contact us now!) -->
+    <footer>
+        <h1>Footer</h1>
+        <!-- button to CTA -->
+        
+        <!-- socials -->
+        
     </footer>
 </body>
-
 </html>
-<script src="app.js"></script>

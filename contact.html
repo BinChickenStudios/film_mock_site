@@ -2,97 +2,86 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact us | MOCK SITE</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo"></a>
-    </div>
-    <div class="dropdown">
-        <button class="dropdown-btn">
-            <img src="burger.png" alt="burger icon">
-        </button>
-        <!--the selection of the drop down menu-->
-        <div id="lightbox" class="lightbox">
-            <div class="lightbox-content">
-                <a href="showcase.html">Showcase</a>
-                <a href="About.html">Meet the team</a>
-                <a href="contact.html">Contact us</a>
-                <!-- Add more page links as needed -->
+    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+    <nav>
+        <!-- text logo -->
+        
+        
+        <!-- hidden side bar -->
+    </nav>
+    <!-- header (cool title screen) -->
+    <section class="section">
+        <h1>Contact</h1>
+        <form action="send_email.php" method="POST" class="contact">
+            <div class="subject">
+                <div>
+                    <input type="radio" name="subject" id="meeting" value="meeting">
+                    <label for="meeting">Schedule Meeting</label>
+                </div>
+                <div>
+                    <input type="radio" name="subject" id="quote" value="quote">
+                    <label for="quote">Request A Quote</label>
+                </div>
+                <div>
+                    <input type="radio" name="subject" id="hello" value="hello">
+                    <label for="hello">Say Hello</label>
+                </div>
             </div>
-        </div>
-    </div>
-</nav>
-<div class="content">
-    <h1 hidden>CALL ME ON *insert number here*</h1>
-    <section>
-      <h2 hidden>call me baby</h2>
-      <p hidden>prettiness if you want... not necessary
-        list of options
-        - book a meeting
-        - quote request
-        - say hello
-        form on right side adjusts relative to selected option
-        submit button
-      </p>
-      <button hidden>call me on *insert number here*</button>
-      
-      <form action="send_email.php" method="POST">
-        <div class="subject">
-        <label>Reason for Contact:</label>
-        <div>
-          <input type="radio" id="meeting" name="subject" value="meeting" checked>
-          <label for="meeting">Schedule Meeting</label>
-        </div>
-        <div>
-          <input type="radio" id="quote" name="subject" value="quote">
-          <label for="quote">Request A Quote</label>
-        </div>
-        <div>
-          <input type="radio" id="hello" name="subject" value="hello">
-          <label for="hello">Say Hello</label>
-        </div>
-      </div>
-
-      <div class="information">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      
-        <label for="contact">Contact Number:</label>
-        <input type="tel" id="contact" name="contact" required>
-      
-      
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      
-        <input type="submit" value="Submit">
-        </div>
-      </form>
-    </div>
-
+            <div class="information">
+                <div class="first">
+                    <input type="text" name="first" id="first">
+                    <label for="first">First Name</label>
+                    <!-- validate text -->
+                </div>
+                <div class="last">
+                    <input type="text" name="last" id="last">
+                    <label for="last">Last Name</label>
+                    <!-- validate text -->
+                </div>
+                <div class="email">
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email Address</label>
+                    <!-- validate the email address -->
+                </div>
+                <div class="phone">
+                    <!-- add number type drop down menu (+61) -->
+                    <input type="text" name="phone" id="phone">
+                    <label for="phone">Phone Number</label>
+                    <!-- validate the phone number -->
+                </div>
+                <div class="budget">
+                    <input type="number" name="budget" id="budget">
+                    <label for="budget">Budget</label>
+                </div>
+                <div class="schedule">
+                    <input type="datetime-local" name="schedule" id="schedule">
+                    <label for="schedule">Preferred Time</label>
+                </div>
+                <div class="message">
+                    <textarea name="message" id="message">
+                        Enter text here...
+                    </textarea>
+                    <label for="message">Message</label>
+                </div>
+                
+            </div>
+        </form>
     </section>
-  </div>
+    <!-- footer CTA (contact us now!) -->
+    <footer>
+        <h1>Footer</h1>
+        <!-- button to CTA -->
 
-  <footer class="footer">
-    <div class="contact-info">
-        <h3>Contact Information</h3>
-        <ul>
-            <li><i class="fas fa-phone"></i> *insert number here*</li>
-            <li><i class="fas fa-envelope"></i> *insert email here*</li>
-        </ul>
-    </div>
-    <div class="copyright">2023 MOCK SITE All rights reserved.</div>
-</footer>
+        <!-- socials -->
 
+    </footer>
 </body>
 
 </html>
