@@ -23,7 +23,6 @@
     </nav>
     <!-- header (cool title screen) -->
     <header class="title">
-        
         <!-- feature title screen... maybe cool animation -->
         <h1>
             <span class="title-text">Looking For</span> 
@@ -43,17 +42,60 @@
             <source src="showreel.mp4" type="video/mp4">
         </video>
         
+        
     </section>
     
-    <section class="gallary">
-        <h2>Gallary</h2>
-        <!-- link them out to check out gallary -->
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <!-- link them out to check out gallery -->
+        <div class="carousel">
+            
+            <input type="radio" name="carousel-radio" id="slide1" checked>
+            <input type="radio" name="carousel-radio" id="slide2">
+            <input type="radio" name="carousel-radio" id="slide3">
+            <input type="radio" name="carousel-radio" id="slide4">
+
+            <div class="carousel-slides">
+                <div class="slide">
+                    <video src="animated logo.mov" type="video/mov" disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
+                </div>
+                <div class="slide">
+                    <video src="showreel.mp4" type="video/mov" disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
+                </div>
+                <div class="slide">
+                    <video src="Genji Temple Of Anubis Nano.mov" type="video/mov" disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
+                </div>
+                <div class="slide">
+                    <video src="genji back attack.mov" type="video/mov"  disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
+                </div>
+            </div>
+            
+            
+            <div class="carousel-navigation">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+            </div>
+          </div>
     </section>
 
     <!-- show off with about me section... flippable cards? carosel? -->
     <section class="about">
         <h2>About</h2>
         <!-- scroll / film reeling where they can show more by dragging down -->
+        <article>
+        <p>Cine Manuel is a production company who’ve worked with a variety of brands, Delivering story driven, business oriented, cinematic and most important original content. Backing those efforts are a team of hard working individuals dedicated to delivering remarkable results from horrors to corporate, all the way to adventure and action. 
+            <ul>    
+                <li>Cinema approved camera</li> 
+                <li>Licensed music</li>
+                <li>Creating our own cinematic scores</li>
+            </ul>
+        </p>
+        <div class="animated-logo">
+            <video src="animated logo.mov"  type="video/mov"  disablePictureInPicture controlsList="nodownload" autoplay muted loop></video>
+        </div>
+        </article>
     </section>
     <!-- brands slider -->
     <section class="brand">
