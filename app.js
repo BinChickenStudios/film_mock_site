@@ -3,7 +3,7 @@ if(!changingText){
     console.log("changing text element could not be found");
 } 
 const texts = [
-    'Creative', 'Intelligent', 'Amazing', 'cinemanuel'];
+    'Creatives?', 'Enthusiasts?', 'Confidence?', 'Cine Manuel'];
     let currentTextIndex = 0;
     
     function changeText() {
