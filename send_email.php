@@ -3,10 +3,30 @@
 //use this to run it locally: php -S localhost:8000
 
 use PHPMailer\PHPMailer\SMTP;
-$name = $_POST['name'];
-$email = $_POST['email'];
 $subject = $_POST['subject'];
+$first = $_POST['first'];
+$last = $_POST['last'];
+$name = $first . ' ' . $last;
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$budget = $_POST['budget'];
+$schedule = $_POST['schedule'];
 $message = $_POST['message'];
+
+$content = 
+'full name: ' . $name . "\n". 
+'email address: ' . $email . "\n".
+'phone number: ' . $phone . "\n";
+
+if (isset($budget)) {
+  $content .= 'budget: $' . $budget . "\n";
+}
+if (isset($schedule)) {
+  $content .= 'schedule: ' . $schedule . "\n";
+}
+$content .= $message;
+
+
 
 require 'vendor/autoload.php'; // Include the PHPMailer autoloader
 
@@ -17,17 +37,18 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'insert SMTP email here';
-$mail->Password = 'insert SMTP password here';
+$mail->Username = 'insert smtp email here';
+$mail->Password = 'insert smtp password here';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
 
 // Set the email details
 $mail->setFrom($email, $name);
-$mail->addAddress('Insert where the email should be sent to here');
-$mail->Subject = $subject;
-$mail->Body = $message;
+$mail->addAddress('insert receiver email here', 'insert receiver name here');
+$mail->Subject = $subject . " | " . $name;
+$mail->Body = $content;
+
 
 
 // Send the email
