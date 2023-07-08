@@ -203,7 +203,7 @@ footer{
     background-size: 50%;
     background-color: #DEE2E7;
     opacity: 0.8;
-    background-image: radial-gradient(circle at center center, #DEE2E7, #6F7C8D), repeating-radial-gradient(circle at center center, #DEE2E7, #DEE2E7, 10px, transparent 20px, transparent 10px);
+    background-image: radial-gradient(circle at center center, #DEE2E7, #152428), repeating-radial-gradient(circle at center center, #DEE2E7, #DEE2E7, 10px, transparent 20px, transparent 10px);
     background-blend-mode: multiply;    
 
   }

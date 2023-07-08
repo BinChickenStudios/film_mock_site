@@ -51,15 +51,15 @@
 
             <div class="information">
                 
-                <label for="first">First Name</label>
+                <label for="first">First Name (*)</label>
                 <input type="text" name="first" id="first" required pattern="^[A-Za-z]{3,15}$"
                     title="Please enter letters only" placeholder="type first name here...">
                 
-                <label for="last">Last Name</label>
-                <input type="text" name="last" id="last" required pattern="^[A-Za-z]{3,15}$"
+                <label for="last">Last Name (*)</label>
+                <input type="text" name="last" id="last" required pattern="^[A-Za-z/s]{3,15}$"
                     title="Please enter letters only" placeholder="type last name here...">
                 
-                <label for="email">Email Address</label>
+                <label for="email">Email Address (*)</label>
                 <input type="email" name="email" id="email"
                     title="Please enter a valid email address" placeholder="johnsmith@email.com...">
                 
@@ -78,13 +78,13 @@
                 </div>
                 <div class="meeting">
                     <label for="schedule">Preferred Date</label>
-                    <input type="date" name="schedule" id="schedule">
+                    <input type="date" name="schedule" id="schedule" min="2023-07-09">
                 </div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="type your message here..." min="3" max="500"></textarea>
+                <label for="message">Message (*)</label>
+                <textarea name="message" id="message" required placeholder="type your message here..." min="3" max="500"></textarea>
                 
                 <!-- drop down (how did you find us?) -->
-
+                
 
                 <div class="resume">
                     <label for="attach">Attach Resume</label>
