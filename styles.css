@@ -454,15 +454,18 @@ form{
     flex-direction: column;
 }
 
-.meeting, .quote{
+.meeting, .quote, .resume{
     display: none;
 }
 
 #meeting:checked ~ .information .meeting{
-    display: block;
+    display: block;  
 }
 
 #quote:checked ~ .information .quote{
     display: block;
 }
 
+#resume:checked ~ .information .resume{
+    display: block;  
+}
