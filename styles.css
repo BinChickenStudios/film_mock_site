@@ -24,23 +24,47 @@ nav{
     height: 100vh;
     height: 100svh;
     z-index: 9999;
+    pointer-events: none;
 }
+
+nav *{
+    pointer-events: auto;
+}
+
 
 #navigate{
     display: none;
     opacity: 0;
 }
 
+.nav-title{
+    
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 4rem);
+    filter: opacity(0.75);
+    font-family: "barge", sans-serif;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: auto;
+    height: auto;
+}
+
 .nav-button{
+    filter: opacity(0.75);
     display: flex;
     align-items: center;  
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     width: 26px;
     height: 26px;
     cursor: pointer;
     z-index: 1;
+}
+
+#navigate:checked ~ .nav-title{
+    display: none;
 }
 
 .nav-button > span,
@@ -64,16 +88,19 @@ nav{
 
 #navigate:checked ~ .nav-button > span {
     transform: rotate(45deg);
+    background-color: #DEE2E7;
   }
   
 #navigate:checked ~ .nav-button > span::before {
     top: 0;
     transform: rotate(0);
+    background-color: #DEE2E7;
 }
   
 #navigate:checked ~ .nav-button > span::after {
     top: 0;
     transform: rotate(90deg);
+    background-color: #DEE2E7;
 }
   
 #navigate:checked ~ .nav-button {
@@ -139,7 +166,6 @@ nav{
 }
 
 
-
 section, header, footer{
     display: flex;
     flex-direction: column;
@@ -156,16 +182,12 @@ h1, h2, h3{
     font-family: "barge", sans-serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 0.9;
 }
 
 section h2{
     display: none;
 }
-/* 
-header, footer{
-    background-color: #152428;
-    color: #DEE2E7;
-} */
 
 footer{
     min-height: 25vh;
@@ -178,26 +200,60 @@ footer{
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-size: 50%;
+    background-color: #DEE2E7;
+    opacity: 0.8;
+    background-image: radial-gradient(circle at center center, #DEE2E7, #6F7C8D), repeating-radial-gradient(circle at center center, #DEE2E7, #DEE2E7, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;    
+
   }
   
 .title h1{
     text-transform: uppercase;
+
+}
+
+.title-text{
+    font-size: 2.5rem;
 }
 
 #changing-text{
-    color: #152428;
-    /* animation: textChange 2s ease-in-out infinite alternate; */
+    color: #DEE2E7;
+    /* figure out how to make the words shrink depending on the size of the word */
+    font-size: clamp(2rem, 3.75rem);
+    animation: textChange 3s ease-in-out infinite alternate;
+}
+
+.title-highlight{
+    color: #6F7C8D;
 }
 
 
 @keyframes textChange {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
-    100% {
-      opacity: 1;
+    100%{
+        opacity: 1;
     }
   }
+
+
+
+/* height of section = view height - difference between first section + 1px */
+.showreel video{
+    /* animation: heightOnScroll 5s linear infinite; */
+}
+
+@keyframes heightOnScroll{
+    0%{
+        height: calc(100vh - 0px + 1px);
+    }
+    100%{
+        height: calc(100vh - 100vh + 1px);
+    }
+}
+
 
 .gallery{
     height: 100vh;

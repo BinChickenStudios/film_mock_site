@@ -13,16 +13,24 @@
 
 <body>
 
-        <!-- sidebar instead of navbar ... tied to the right side of sreen -->
-        <nav>
+    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+    
+    <nav>
+            <span class="nav-title">Cine Manuel</span>
             <input type="checkbox" name="navigate" id="navigate">
             <label class="nav-button" for="navigate">
                 <span></span>
-              </label>
+            </label>
             <div class="nav-menu">
-                <a href="index.html" id="nav-contact"><div>Home</div></a>
-                <a href="gallery.html" id="nav-gallery"><div>Gallery</div></a>
-                <a href="about.html" id="nav-about"><div>About Us</div></a>
+                <a href="index.html" id="nav-contact">
+                    <div>Home</div>
+                </a>
+                <a href="gallery.html" id="nav-gallery">
+                    <div>Gallery</div>
+                </a>
+                <a href="about.html" id="nav-about">
+                    <div>About Us</div>
+                </a>
             </div>
     </nav>
 
@@ -40,20 +48,23 @@
 
             <div class="information">
                 <label for="first">First Name</label>
-                <input type="text" name="first" id="first" required pattern="[A-Za-z\s]+" title="Please enter letters only">
+                <input type="text" name="first" id="first" required pattern="[A-Za-z\s]+"
+                    title="Please enter letters only">
                 <label for="last">Last Name</label>
-                <input type="text" name="last" id="last"  required pattern="[A-Za-z\s]+" title="Please enter letters only">
+                <input type="text" name="last" id="last" required pattern="[A-Za-z\s]+"
+                    title="Please enter letters only">
                 <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Please enter a valid email address">
                 <label for="phone">Phone Number</label>
-                <input type="text" name="phone" id="phone" >
+                <input type="text" name="phone" id="phone">
                 <div class="quote">
                     <label for="budget">Budget</label>
                     <input type="number" name="budget" id="budget">
                 </div>
                 <div class="meeting">
                     <label for="schedule">Preferred Time</label>
-                    <input type="datetime-local" name="schedule" id="schedule">
+                    <input type="date" name="schedule" id="schedule">
                 </div>
                 <label for="message">Message</label>
                 <textarea name="message" id="message">

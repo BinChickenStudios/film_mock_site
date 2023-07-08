@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
     <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- <script defer src="app.js"></script> -->
+    <script defer src="app.js"></script>
 
 </head>
 <body>
@@ -16,6 +16,7 @@
 
     <!-- sidebar instead of navbar ... tied to the right side of sreen -->
     <nav>
+            <span class="nav-title">Cine Manuel</span>
             <input type="checkbox" name="navigate" id="navigate">
             <label class="nav-button" for="navigate">
                 <span></span>
@@ -32,7 +33,8 @@
         <h1>
             <span class="title-text">Looking For</span> 
             <br>
-            <span class="title-name" id="changing-text">Cine Manuel</span>
+            <span class="title-name" id="changing-text">
+                <span class="title-highlight">C</span>ine <span class="title-highlight">M</span>anuel</span>
         </h1>
         <blockquote><i>“Creativity is Intelligence having fun” ~ Albert Einstein</i></blockquote>
         
@@ -41,7 +43,6 @@
     
     <!-- interactive showreel? cool warping effects? -->
     <section class="showreel">
-        <h2>Show Reel</h2>
         <!-- 16/9 video that the user can interact with but controlled -->
         <video class="showreel-video" style="pointer-events: none;" disablePictureInPicture controlsList="nodownload" autoplay muted loop>
             <source src="showreel.mp4" type="video/mp4">
@@ -49,10 +50,9 @@
         
         
     </section>
-    
+<!--     
     <section class="gallery">
         <h2>Gallery</h2>
-        <!-- link them out to check out gallery -->
         <div class="carousel">
             
             <input type="radio" name="carousel-radio" id="slide1" checked>
@@ -83,18 +83,18 @@
               <label for="slide4"></label>
             </div>
           </div>
-    </section>
+    </section> -->
 
     <!-- show off with about me section... flippable cards? carosel? -->
     <section class="about">
         <h2>About</h2>
         <!-- scroll / film reeling where they can show more by dragging down -->
         <article>
+            <div class="animated-logo">
+                <video src="animated logo.mov"  type="video/mov"  disablePictureInPicture controlsList="nodownload" autoplay muted loop></video>
+            </div>
         <p>Cine Manuel is a production company who’ve worked with a variety of brands, Delivering story driven, business oriented, cinematic and most important original content. Backing those efforts are a team of hard working individuals dedicated to delivering remarkable results from horrors to corporate, all the way to adventure and action. 
         </p>
-        <div class="animated-logo">
-            <video src="animated logo.mov"  type="video/mov"  disablePictureInPicture controlsList="nodownload" autoplay muted loop></video>
-        </div>
         </article>
     </section>
     <!-- brands slider -->

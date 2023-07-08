@@ -3,11 +3,22 @@ if(!changingText){
     console.log("changing text element could not be found");
 } 
 const texts = [
-    'Creatives?', 'Enthusiasts?', 'Confidence?', 'Cine Manuel'];
+    'Craftsmanship', 'Mastery', 'Precision', 'Cine Manuel'];
     let currentTextIndex = 0;
     
     function changeText() {
-        changingText.textContent = texts[currentTextIndex];
+        const text = texts[currentTextIndex];
+        const words = text.split(" ");
+        let modifiedText = "";
+        
+        for (let i = 0; i < words.length; i++) {
+          const firstLetter = words[i].charAt(0);
+          const restOfWord = words[i].slice(1);
+          const modifiedWord = `<span class="title-highlight">${firstLetter}</span>${restOfWord}`;
+          modifiedText += modifiedWord + " ";
+        }
+
+        changingText.innerHTML = modifiedText;
         currentTextIndex = (currentTextIndex + 1) % texts.length;
     }
     
@@ -15,7 +26,7 @@ const texts = [
 
 if(changingText){ 
     changeText();
-    changingTextInterval = setInterval(changeText, 2000);
+    changingTextInterval = setInterval(changeText, 6000);
 }
 
 
