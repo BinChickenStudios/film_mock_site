@@ -10,84 +10,59 @@
     <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body>
-    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
-    <nav>
-        <!-- text logo -->
-        
-        
-        <!-- hidden side bar -->
+
+        <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+        <nav>
+            <input type="checkbox" name="navigate" id="navigate">
+            <label class="nav-button" for="navigate">
+                <span></span>
+              </label>
+            <div class="nav-menu">
+                <a href="index.html" id="nav-contact"><div>Home</div></a>
+                <a href="gallery.html" id="nav-gallery"><div>Gallery</div></a>
+                <a href="about.html" id="nav-about"><div>About Us</div></a>
+            </div>
     </nav>
+
     <!-- header (cool title screen) -->
     <section class="section">
         <h1>Contact</h1>
         <form action="send_email.php" method="POST" class="contact">
-            <div class="subject">
-                <div>
-                    <input type="radio" name="subject" id="meeting" value="Meeting" checked>
-                    <label for="meeting">Schedule Meeting</label>
-                </div>
-                <div>
-                    <input type="radio" name="subject" id="quote" value="Quote">
-                    <label for="quote">Request A Quote</label>
-                </div>
-                <div>
-                    <input type="radio" name="subject" id="hello" value="Hello">
-                    <label for="hello">Say Hello</label>
-                </div>
-            </div>
+
+            <input type="radio" name="subject" id="meeting" value="Meeting" checked>
+            <label for="meeting">Schedule Meeting</label>
+            <input type="radio" name="subject" id="quote" value="Quote">
+            <label for="quote">Request A Quote</label>
+            <input type="radio" name="subject" id="hello" value="Hello">
+            <label for="hello">General Enquiry</label>
+
             <div class="information">
-                <div class="first">
-                    <input type="text" name="first" id="first">
-                    <label for="first">First Name</label>
-                    <!-- validate text -->
-                </div>
-                <div class="last">
-                    <input type="text" name="last" id="last">
-                    <label for="last">Last Name</label>
-                    <!-- validate text -->
-                </div>
-                <div class="email">
-                    <input type="email" name="email" id="email">
-                    <label for="email">Email Address</label>
-                    <!-- validate the email address -->
-                </div>
-                <div class="phone">
-                    <!-- add number type drop down menu (+61) -->
-                    <input type="text" name="phone" id="phone">
-                    <label for="phone">Phone Number</label>
-                    <!-- validate the phone number -->
-                </div>
-                <div class="budget">
-                    <input type="number" name="budget" id="budget">
+                <label for="first">First Name</label>
+                <input type="text" name="first" id="first" required pattern="[A-Za-z\s]+" title="Please enter letters only">
+                <label for="last">Last Name</label>
+                <input type="text" name="last" id="last"  required pattern="[A-Za-z\s]+" title="Please enter letters only">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" >
+                <div class="quote">
                     <label for="budget">Budget</label>
+                    <input type="number" name="budget" id="budget">
                 </div>
-                <div class="schedule">
-                    <input type="datetime-local" name="schedule" id="schedule">
+                <div class="meeting">
                     <label for="schedule">Preferred Time</label>
+                    <input type="datetime-local" name="schedule" id="schedule">
                 </div>
-                <div class="message">
-                    <textarea name="message" id="message">
-                        Enter text here...
-                    </textarea>
-                    <label for="message">Message</label>
-                </div>
-                <div class="submit">
-                    <input type="submit" value="submit">
-                    <label for="submit">submit</label>
-                </div>
-                
+                <label for="message">Message</label>
+                <textarea name="message" id="message">
+                </textarea>
+                <label for="submit">submit</label>
+                <input type="submit" value="submit">
             </div>
         </form>
     </section>
-    <!-- footer CTA (contact us now!) -->
-    <footer>
-        <h1>Footer</h1>
-        <!-- button to CTA -->
-
-        <!-- socials -->
-
-    </footer>
 </body>
 
 </html>
