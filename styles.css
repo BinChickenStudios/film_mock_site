@@ -174,7 +174,31 @@ section, header, footer{
     /* height: 100vh;
     height: 100svh; */
     width: 100%;
-    padding: 0;
+    padding: 0 5% 0 5%;
+    font-size: 12px;
+}
+
+
+footer{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    text-align: left;
+
+}
+.production{
+
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+}
+
+.socials a img{
+    padding: 0 4px;
+    width: 32px;
+    height: 32px;
 }
   
 h1, h2, h3{
@@ -202,9 +226,9 @@ footer{
     text-align: center;
     background-size: 50%;
     background-color: #DEE2E7;
-    opacity: 0.8;
-    background-image: radial-gradient(circle at center center, #DEE2E7, #152428), repeating-radial-gradient(circle at center center, #DEE2E7, #DEE2E7, 10px, transparent 20px, transparent 10px);
-    background-blend-mode: multiply;    
+    /* opacity: 0.8; */
+    /* background-image: radial-gradient(circle at center center, #DEE2E7, #152428), repeating-radial-gradient(circle at center center, #DEE2E7, #DEE2E7, 10px, transparent 20px, transparent 10px); */
+    /* background-blend-mode: multiply;     */
 
   }
   
@@ -218,7 +242,7 @@ footer{
 }
 
 #changing-text{
-    color: #DEE2E7;
+    color: #152428;
     /* figure out how to make the words shrink depending on the size of the word */
     font-size: clamp(2rem, 3.75rem);
     animation: textChange 3s ease-in-out infinite alternate;
@@ -469,3 +493,4 @@ form{
 #resume:checked ~ .information .resume{
     display: block;  
 }
+

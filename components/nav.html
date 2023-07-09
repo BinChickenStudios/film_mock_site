@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
+    <link rel="stylesheet" href="components.css">
+    <title>nav mockup</title>
+</head>
+<body>
+        <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+    <nav>
+        <span class="nav-title">Cine Manuel</span>
+            
+        <input type="checkbox" name="navigate" id="navigate">
+        <label class="nav-button" for="navigate">
+            <span></span>
+        </label>
+        <div class="nav-menu">
+            <a href="contact.html" id="nav-contact"><div>Contact Us</div></a>
+            <a href="wip.html" id="nav-gallery"><div>Gallery</div></a>
+            <a href="wip.html" id="nav-about"><div>About Us</div></a>
+        </div>
+    </nav>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, expedita commodi animi enim dolor tempore magnam molestias rerum maiores, necessitatibus ullam amet magni pariatur ipsam optio! Ipsum eum pariatur distinctio?
+    Ad veritatis veniam sit ratione. Soluta deserunt minus accusantium aliquid? Obcaecati error architecto quas fuga, totam nostrum. Quo cupiditate excepturi doloremque dicta vero, laboriosam quidem voluptate eaque laudantium, nostrum cum?
+    Quo maxime incidunt iusto omnis sapiente maiores sunt id ullam pariatur, quasi enim, quod officia doloremque rerum vero laudantium assumenda necessitatibus neque libero, corrupti placeat. Tempore molestiae voluptas facere et?
+    Aliquam similique velit a, odit mollitia quaerat labore quae perferendis nemo necessitatibus voluptatibus sed blanditiis, enim id aspernatur quam! Molestiae ducimus, quos dicta ab earum pariatur sed obcaecati hic. Officia.
+    Incidunt corporis, excepturi ut recusandae ea consequuntur porro expedita fugiat cupiditate, possimus animi libero odit esse modi. Illo ratione reprehenderit est distinctio, blanditiis iste ad alias cupiditate deleniti magni non.
+    Eos maxime necessitatibus veritatis itaque ullam fuga eveniet voluptate commodi, earum quasi velit iusto quibusdam ea nemo suscipit labore laboriosam quisquam. Eum dolor ea praesentium possimus recusandae minus non neque!
+    Dicta at, dignissimos doloribus veritatis ipsum laudantium repellendus porro quae, in voluptatem eius quibusdam dolores ut dolore ex, itaque nemo? Nobis, aliquam distinctio! Vel animi voluptates, incidunt possimus nobis placeat.
+    Ducimus velit, reiciendis amet natus perspiciatis eligendi laboriosam saepe dolorum magnam et inventore vel quos cumque ab officiis eaque ipsa enim nam repellendus. Sit ipsam illo voluptatum facilis reprehenderit sequi.
+    Explicabo modi tenetur neque illum odio beatae, dolorum, excepturi cupiditate dolores soluta sunt placeat ab repellat sapiente praesentium. Id atque similique nobis reprehenderit illum nemo. Velit voluptatibus tenetur dicta quidem.
+    Esse ex ipsam modi laudantium exercitationem voluptatibus! Aspernatur, eveniet. Similique laborum aspernatur assumenda ipsa obcaecati eos maiores recusandae molestiae dolorum dolores, modi veniam culpa facere rem porro quasi illum delectus.</p>
+</body>
+</html>
+<style>
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        min-height: 100svh;
+        z-index: 9999;
+        pointer-events: none;
+    }
+    
+    nav *{
+        pointer-events: auto;
+    }
+    
+    
+    #navigate{
+        display: none;
+        opacity: 0;
+    }
+    
+    .nav-title{
+        
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 4rem);
+        filter: opacity(0.75);
+        font-family: "barge", sans-serif;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: auto;
+        height: auto;
+    }
+    
+    .nav-button{
+        filter: opacity(0.75);
+        display: flex;
+        align-items: center;  
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    #navigate:checked ~ .nav-title{
+        display: none;
+    }
+    
+    .nav-button > span,
+    .nav-button > span::before,
+    .nav-button > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #6F7C8D;
+      transition: 0.3s;
+    }
+    .nav-button > span::before {
+      content: '';
+      top: -8px;
+    }
+    .nav-button > span::after {
+      content: '';
+      top: 8px;
+    }
+    
+    #navigate:checked ~ .nav-button > span {
+        transform: rotate(45deg);
+        background-color: #DEE2E7;
+      }
+      
+    #navigate:checked ~ .nav-button > span::before {
+        top: 0;
+        transform: rotate(0);
+        background-color: #DEE2E7;
+    }
+      
+    #navigate:checked ~ .nav-button > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        background-color: #DEE2E7;
+    }
+      
+    #navigate:checked ~ .nav-button {
+        visibility: visible;
+    }
+    
+    
+    .nav-menu{
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform: translate(100%);
+    }
+    
+    .nav-menu a{
+        color: #DEE2E7;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #nav-contact{
+        background-color: #152428;
+        color: #DEE2E7;
+    }
+    
+    #nav-gallery{
+        background-color: #DEE2E7;
+        color: #152428;
+    }
+    
+    #nav-about{
+        background-color: #6F7C8D;
+        color: #DEE2E7;
+    }
+    
+    .nav-menu a div{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #navigate:checked ~ .nav-menu{
+        display: flex;
+        overflow: hidden;
+        /* animation: navSlide 1s ease-in-out; */
+        transform: translate(0%);
+    }
+    
+    @keyframes navSlide {
+        0%{
+            transform: translateY(100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+    </style>
