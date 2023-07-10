@@ -7,123 +7,76 @@
     <title>Home | Cine Manuel</title>
     <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
     <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="app.js"></script>
-
+    <link rel="stylesheet" href="page.css">
 </head>
 <body>
-    <input type="checkbox" name="animate" id="animate" checked hidden>
-    <label for="animate" hidden>animations</label>
-
-    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
-    <nav>
-            <span class="nav-title">Cine Manuel</span>
+<nav>
+        <span class="nav-title">Cine Manuel</span>
             
-            <input type="checkbox" name="navigate" id="navigate">
-            <label class="nav-button" for="navigate">
-                <span></span>
-              </label>
-            <div class="nav-menu">
-                <a href="contact.html" id="nav-contact"><div>Contact Us</div></a>
-                <a href="wip.html" id="nav-gallery"><div>Gallery</div></a>
-                <a href="wip.html" id="nav-about"><div>About Us</div></a>
-            </div>
-    </nav>
-    <!-- header (cool title screen) -->
+        <input type="checkbox" name="navigate" id="navigate">
+        <label class="nav-button" for="navigate">
+            <span></span>
+        </label>
+        <div class="nav-menu">
+            <a href="contact.html" id="nav-contact"><div>Contact Us</div></a>
+            <a href="wip.html" id="nav-gallery"><div>Gallery</div></a>
+            <a href="wip.html" id="nav-about"><div>About Us</div></a>
+        </div>
+</nav>
     <header class="title">
-        <!-- feature title screen... maybe cool animation -->
         <h1>
             <span class="title-text">Looking For</span> 
             <br>
             <span class="title-name" id="changing-text">
-                <span class="title-highlight">C</span>ine <span class="title-highlight">M</span>anuel</span>
+            <span class="title-highlight">C</span>ine <span class="title-highlight">M</span>anuel</span>
         </h1>
         <blockquote><i>“Creativity is Intelligence having fun” ~ Albert Einstein</i></blockquote>
-        
     </header>
-    <!-- scroll down has smooth cool animation -->
+
+    <main class="content">
+        <section class="about">
+            <figure>
+            <img src="../CM_logo_loop_1.gif" alt="animated-logo.gif">
+            <p>Cine Manuel is a production company who’ve worked with a variety of brands, Delivering story driven, business oriented, cinematic and most important original content. Backing those efforts are a team of hard working individuals dedicated to delivering remarkable results from horrors to corporate, all the way to adventure and action. 
+            </p>
+            </figure>
     
-    <!-- interactive showreel? cool warping effects? -->
-    <section class="showreel">
-        <!-- 16/9 video that the user can interact with but controlled -->
-        <video class="showreel-video" style="pointer-events: none;" disablePictureInPicture controlsList="nodownload" autoplay muted loop>
-            <source src="showreel.mp4" type="video/mp4">
-        </video>
-        
-        
-    </section>
-<!--     
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="carousel">
+        </section>
+    </main>
+<footer>
+        <div class="production">
+            <p>Cine Manuel Productions uses only the best <a href="wip.html">gear</a> and our <a href="wip.html">scope</a> ranges through all the levels of media production.</p>
+        </div>
+        <div class="socials">
+            <!-- <a href="wip.html"><img src="..\socials\youtube.png" alt="youtube"></a> -->
+            <!-- <a href="wip.html"><img src="..\socials\facebook.png" alt="Facebook"></a> -->
+            <a href="https://www.instagram.com/cine_manuel/" class="instagram"><img src="..\socials\instagram.png" alt="Instagram"></a>
+            <!-- <a href="wip.html"><img src="..\socials\twitter.png" alt="Twitter"></a> -->
+            <!-- <a href="https://au.linkedin.com/in/rayan-heloui-aa94581b0"><img src="..\socials\linkedin.png" alt="linkedin"></a> -->
             
-            <input type="radio" name="carousel-radio" id="slide1" checked>
-            <input type="radio" name="carousel-radio" id="slide2">
-            <input type="radio" name="carousel-radio" id="slide3">
-            <input type="radio" name="carousel-radio" id="slide4">
-
-            <div class="carousel-slides">
-                <div class="slide">
-                    <video src="animated logo.mov" type="video/mov" disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
-                </div>
-                <div class="slide">
-                    <video src="showreel.mp4" type="video/mov" disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
-                </div>
-                <div class="slide">
-                    <video src="Genji Temple Of Anubis Nano.mov" type="video/mov" disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
-                </div>
-                <div class="slide">
-                    <video src="genji back attack.mov" type="video/mov"  disablePictureInPicture controlsList="nodownload" autoplay muted loop playsinline></video>
-                </div>
-            </div>
-            
-            
-            <div class="carousel-navigation">
-              <label for="slide1"></label>
-              <label for="slide2"></label>
-              <label for="slide3"></label>
-              <label for="slide4"></label>
-            </div>
-          </div>
-    </section> -->
-
-    <!-- show off with about me section... flippable cards? carosel? -->
-    <section class="about">
-        <h2>About</h2>
-        <!-- scroll / film reeling where they can show more by dragging down -->
-        <article>
-            <div class="animated-logo">
-                <video src="animated logo.mov"  type="video/mov"  disablePictureInPicture controlsList="nodownload" autoplay muted loop></video>
-            </div>
-        <p>Cine Manuel is a production company who’ve worked with a variety of brands, Delivering story driven, business oriented, cinematic and most important original content. Backing those efforts are a team of hard working individuals dedicated to delivering remarkable results from horrors to corporate, all the way to adventure and action. 
-        </p>
-        </article>
-    </section>
-    <!-- brands slider -->
-    <section class="brand">
-        <h2>Brands</h2>
-        <!-- brand slider -->
-        <div class="slider">
-            <div class="slider-content">
-                <img src="brands/4x4 Show - Custom.png" alt="4x4 Show">
-                <img src="brands/Bilstein Logo.png" alt="Bilstein">
-                <img src="brands/dr-logo-white.png" alt="Dr">
-                <img src="brands/HEASMANS_RGB_WHT.png" alt="Heasmans">
-                <img src="brands/LOGO_A.png" alt="Sam Young 4x4">
-                <img src="brands/Mater Lotteries Logo.jpeg" alt="Mater Lotteries">
-                <img src="brands/maxxis logo.png" alt="Maxxis">
-                <img src="brands/Primary-Logo_White_with-tag.png" alt="Dreamatic">
-                <img src="brands/Vodka Cruiser Logo.jpg" alt="Vodka Cruiser">
-            </div>
         </div>
         
-    </section>
-    <!-- footer CTA (contact us now!) -->
-    <footer>
-        <!-- <h2>Footer</h2> -->
-        <!-- button to CTA -->
-        <!-- socials -->
-        
-    </footer>
+        <div class="CTA">
+            <p>Thinking of asking us something?</p> 
+            <a href="contact.html"><button>Contact Us</button></a>
+        </div>
+
+        <div class="legal">
+            <blockquote>@ 2023 Cine Manuel Productions</blockquote>
+            <blockquote>designed by Ibrahim Aouli</blockquote>
+        </div>
+</footer>
 </body>
 </html>
+
+<style>
+    header{
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+</style>

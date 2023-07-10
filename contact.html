@@ -1,99 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="CM Logo_Website.png" type="image/png">
-    <title>Contact Us | Cine Manuel</title>
     <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
     <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-
-<body>
-
-    <!-- sidebar instead of navbar ... tied to the right side of sreen -->
+    <link rel="stylesheet" href="page.css">
     
-    <nav>
-            <span class="nav-title">Cine Manuel</span>
-            <input type="checkbox" name="navigate" id="navigate">
-            <label class="nav-button" for="navigate">
-                <span></span>
-            </label>
-            <div class="nav-menu">
-                <a href="index.html" id="nav-contact">
-                    <div>Home</div>
-                </a>
-                <a href="wip.html" id="nav-gallery">
-                    <div>Gallery</div>
-                </a>
-                <a href="wip.html" id="nav-about">
-                    <div>About Us</div>
-                </a>
-            </div>
-    </nav>
+    <title>Page Mockup</title>
+</head>
+<body>
+<nav>
+        <span class="nav-title">Cine Manuel</span>
+            
+        <input type="checkbox" name="navigate" id="navigate">
+        <label class="nav-button" for="navigate">
+            <span></span>
+        </label>
+        <div class="nav-menu">
+            <a href="contact.html" id="nav-contact"><div>Contact Us</div></a>
+            <a href="wip.html" id="nav-gallery"><div>Gallery</div></a>
+            <a href="wip.html" id="nav-about"><div>About Us</div></a>
+        </div>
+</nav>
+    <main class="content">
+        <section class="contact">
+            <h2 class="contact-title">Contact Us</h2>
+            <form action="send_email.php" method="POST" class="contact-form">
 
-    <!-- header (cool title screen) -->
-    <section class="section">
-        <h1>Contact</h1>
-        <form action="send_email.php" method="POST" class="contact">
+                <!-- <input class="subject-input" type="radio" name="subject" id="meeting" value="Meeting" checked>
+                <label class="subject" for="meeting">
+                    <span class="subject-radio"></span>
+                    <span class="subject-text">Schedule Meeting</span>
+                </label>
+                <input class="subject-input" type="radio" name="subject" id="quote" value="Quote">
+                <label class="subject" for="quote">
+                    <span class="subject-radio"></span>
+                    <span class="subject-text">Request A Quote</span>
+                </label>
+                <input class="subject-input" type="radio" name="subject" id="hello" value="Hello">
+                <label class="subject" for="hello">
+                    <span class="subject-radio"></span>
+                    <span class="subject-text">General Enquiry</span>
+                </label>
+                <input class="subject-input" type="radio" name="subject" id="resume" value="Resume">
+                <label class="subject" for="resume">
+                    <span class="subject-radio"></span>
+                    <span class="subject-text">Career with Cine Manuel</span>
+                </label> -->
 
-            <input type="radio" name="subject" id="meeting" value="Meeting" checked>
-            <label for="meeting">Schedule Meeting</label>
-            <input type="radio" name="subject" id="quote" value="Quote">
-            <label for="quote">Request A Quote</label>
-            <input type="radio" name="subject" id="hello" value="Hello">
-            <label for="hello">General Enquiry</label>
-            <input type="radio" name="subject" id="resume" value="resume">
-            <label for="resume">Looking for work?</label>
-
-            <div class="information">
-                
-                <label for="first">First Name (*)</label>
-                <input type="text" name="first" id="first" required pattern="^[A-Za-z]{3,15}$"
-                    title="Please enter letters only" placeholder="type first name here...">
-                
-                <label for="last">Last Name (*)</label>
-                <input type="text" name="last" id="last" required pattern="^[A-Za-z/s]{3,15}$"
-                    title="Please enter letters only" placeholder="type last name here...">
-                
-                <label for="email">Email Address (*)</label>
-                <input type="email" name="email" id="email"
-                    title="Please enter a valid email address" placeholder="johnsmith@email.com...">
-                
-                <label for="code">Country Code</label>
-                <input type="text" name="code" id="code" pattern="^\+\d{1,3}$"
-                    title="Please enter a valid country code" placeholder="+123">
-                
-                <label for="phone">Phone Number</label>
-                <input type="text" name="phone" id="phone" pattern="^\d{4,15}$" placeholder="type phone number here..."
-                    title="Please enter a valid phone number">
-                
-                <div class="quote">
-                    <label for="budget">Budget</label>
-                    <input type="number" name="budget" id="budget" pattern="/^\$?\d+(,\d{3})*(\.\d+)?$/" placeholder="$0.00"
-                    title="please enter numbered currency">
+                <!-- drop down selectors (not possible to hide elements without javascript) -->
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="meeting" id="meeting" selected>Schedule Meeting</option>
+                    <option value="quote" id="quote">Request A Quote</option>
+                    <option value="hello" id="hello">General Enquiry</option>
+                    <option value="resume" id="resume">Looking for work</option>
+                </select>
+    
+                <div class="information">
+                    
+                    <label for="first">First Name (*)</label>
+                    <input type="text" name="first" id="first" required pattern="^[A-Za-z]{3,15}$"
+                        title="Please enter letters only" placeholder="type first name here...">
+                    
+                    <label for="last">Last Name (*)</label>
+                    <input type="text" name="last" id="last" required pattern="^[A-Za-z/s]{3,15}$"
+                        title="Please enter letters only" placeholder="type last name here...">
+                    
+                    <label for="email">Email Address (*)</label>
+                    <input type="email" name="email" id="email"
+                        title="Please enter a valid email address" placeholder="johnsmith@email.com...">
+                    
+                    <label for="code">Country Code</label>
+                    <input type="text" name="code" id="code" pattern="^\+\d{1,3}$"
+                        title="Please enter a valid country code" placeholder="+123">
+                    
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone" pattern="^\d{4,15}$" placeholder="type phone number here..."
+                        title="Please enter a valid phone number">
+                    
+                    <div class="quote">
+                        <label for="budget">Budget</label>
+                        <input type="text" name="budget" id="budget" pattern="^[$]?[0-9]+(\.[0-9]{1,2})?$" placeholder="$0.00"
+                        title="please enter numbered currency">
+                    </div>
+                    <div class="meeting">
+                        <label for="schedule">Preferred Date</label>
+                        <input type="date" name="schedule" id="schedule" min="2023-07-09">
+                    </div>
+                    <label for="message">Message (*)</label>
+                    <textarea name="message" id="message" required placeholder="type your message here..." min="3" max="500"></textarea>
+                    
+                    <!-- drop down (how did you find us?) -->
+    
+                    <div class="resume">
+                        <label for="attach">Attach Resume</label>
+                        <input type="file" name="attach" id="attach" accept=".pdf, .doc, .docx">
+                    </div>
+    
+                    <!-- <label for="submit">submit</label> -->
+                    <input type="submit" value="submit">
                 </div>
-                <div class="meeting">
-                    <label for="schedule">Preferred Date</label>
-                    <input type="date" name="schedule" id="schedule" min="2023-07-09">
-                </div>
-                <label for="message">Message (*)</label>
-                <textarea name="message" id="message" required placeholder="type your message here..." min="3" max="500"></textarea>
-                
-                <!-- drop down (how did you find us?) -->
+            </form>
+        </section>
+    </main>
+<footer>
+        <div class="production">
+            <p>Cine Manuel Productions uses only the best <a href="wip.html">gear</a> and our <a href="wip.html">scope</a> ranges through all the levels of media production.</p>
+        </div>
+        <div class="socials">
+            <!-- <a href="wip.html"><img src="..\socials\youtube.png" alt="youtube"></a> -->
+            <!-- <a href="wip.html"><img src="..\socials\facebook.png" alt="Facebook"></a> -->
+            <a href="https://www.instagram.com/cine_manuel/" class="instagram"><img src="..\socials\instagram.png" alt="Instagram"></a>
+            <!-- <a href="wip.html"><img src="..\socials\twitter.png" alt="Twitter"></a> -->
+            <!-- <a href="https://au.linkedin.com/in/rayan-heloui-aa94581b0"><img src="..\socials\linkedin.png" alt="linkedin"></a> -->
+            
+        </div>
+        
+        <div class="CTA">
+            <p>Thinking of asking us something?</p> 
+            <a href="contact.html"><button>Contact Us</button></a>
+        </div>
 
-                <div class="resume">
-                    <label for="attach">Attach Resume</label>
-                    <input type="file" name="attach" id="attach" accept=".pdf, .doc, .docx">
-                </div>
-
-                <label for="submit">submit</label>
-                <input type="submit" value="submit">
-            </div>
-        </form>
-    </section>
+        <div class="legal">
+            <blockquote>@ 2023 Cine Manuel Productions</blockquote>
+            <blockquote>designed by Ibrahim Aouli</blockquote>
+        </div>
+</footer>
 </body>
 </html>
+
+<style>
+    .contact-form{
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    
+    /* input.subject[type="radio"]{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #000;
+        background-color: #fff;
+    }
+
+
+    input.subject[type="radio"]:checked{
+        background-color: black;
+    } */
+
+.contact-form{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.subject-input{
+    display: none;
+    opacity: 0;
+}
+
+.subject{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    height: 12px;
+    margin: 4px 0;
+}
+
+.subject-radio{
+    min-height: 12px;
+    min-width: 12px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-bottom: -2px;
+}
+
+.subject-text {
+  white-space: nowrap;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.meeting, .quote, .resume{
+    display: none;
+}
+
+#meeting:checked ~ .information .meeting{
+    display: block;  
+}
+
+#quote:checked ~ .information .quote{
+    display: block;
+}
+
+#resume:checked ~ .information .resume{
+    display: block;  
+}
+
+</style>
+
+
+<script>
+    import {
+    ASCII_VALID,
+    CURRENCY, 
+    EMAIL, 
+    FIRST_NAME, 
+    LAST_NAME, 
+    PHONE_CODE, 
+    PHONE_VALID,
+    FILES,
+    DOCUMENTS
+} from "../utils/regex";
+
+import { 
+    getValidatedInputValue, 
+    validateStringValue 
+} from "../utils/validate";
+
+// const textareas = document.getElementsByTagName('textarea');
+const submitButton = document.getElementById("submit");
+
+if(!submitButton){
+    console.log("no submit button was found, validation cannot be done here");
+    return;
+}else{
+    submitButton.addEventListener("click", function(event){
+        event.preventDefault();
+
+        if(!validateInputsByName()){
+            console.log("required inputs were missing, failed to send.");
+            return;
+        }
+
+        submitFormManually();
+    })
+}
+
+
+function validateContactForm(){
+    const subject = document.getElementsByName("subject");
+    const subjectValue = getValidatedInputValue(subject);
+    if(!subjectValue){
+        console.log("user didn't select valid subject");
+        return;
+    }
+    
+    const first = document.getElementsByName("first");
+    let firstValue = getValidatedInputValue(first, FIRST_NAME);
+    if(!firstValue){
+        console.log("user didn't input there first name");
+        return;
+    }
+    firstValue = capitalizeString(firstValue);
+    
+    const last = document.getElementsByName("last");
+    let lastValue = getValidatedInputValue(last, LAST_NAME);
+    if(!lastValue){
+        console.log("user didn't input there last name");
+        return;
+    }
+    lastValue = capitalizeString(lastValue);
+    
+    
+    const email = document.getElementsByName("email");
+    let emailValue = getValidatedInputValue(email, EMAIL);
+    if(!emailValue){
+        console.log("user didn't input valid email");
+        return;
+    }
+    
+    
+    const message = document.getElementsByName("message");
+    const messageValue = getValidatedInputValue(message);
+    if(!messageValue){
+        console.log("user didn't input in a valid message");
+        return;
+    }
+
+
+    const code = document.getElementsByName("code");
+    const codeValue = getValidatedInputValue(code, PHONE_CODE);
+    if(!codeValue){
+        console.log("user didn't input valid phone code");
+    }
+
+    const phone = document.getElementsByName("phone");
+    const phoneValue = getValidatedInputValue(phone, PHONE_VALID);
+    if(!phoneValue){
+        console.log("user didn't input valid phone number");
+    }
+    
+    if(subjectValue.toLowerCase() === "quote"){
+        const budget = document.getElementsByName("budget");
+        let budgetValue = getValidatedInputValue(budget, CURRENCY);
+        if(!budgetValue){
+            console.log("user didn't input valid budget");
+        }else{
+            budgetValue = parseFloat(budgetValue.replace(/[^0-9.-]+/g, ''));
+        }
+    }
+    
+    if(subjectValue.toLowerCase() === "meeting"){
+        const schedule = document.getElementsByName("schedule");
+        let scheduleDate = getValidatedInputValue(schedule);
+        if(!scheduleDate){
+            console.log("user didn't input valid date");
+        }
+
+    }
+    
+    const file = document.getElementsByName("file");
+    let fileValue = getValidatedInputValue(file, DOCUMENTS);
+    if(!fileValue){
+        console.log("user didn't upload valid file");
+    }
+}
+
+</script>
