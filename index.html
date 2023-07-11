@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
     <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
     <link rel="stylesheet" href="page.css">
+    <script defer src="components/title.js"></script>
+
 </head>
 <body>
 <nav>
@@ -23,17 +25,83 @@
             <a href="wip.html" id="nav-about"><div>About Us</div></a>
         </div>
 </nav>
-    <header class="title">
-        <h1>
-            <span class="title-text">Looking For</span> 
-            <br>
-            <span> <span class="title-name" id="changing-text">
-                <span class="title-highlight">C</span>ine <span class="title-highlight">M</span>anuel
-            </span> </span>
-        </h1>
-        <blockquote><i>“Creativity is Intelligence having fun” ~ Albert Einstein</i></blockquote>
-    </header>
+<header class="title">
+    <h1>
+        <span class="title-text">Looking For</span> 
+        <br>
+        <span>
+            <span class="title-name" id="changing-text">
+            <span class="title-highlight">C</span>ine <span class="title-highlight">M</span>anuel</span>
+        </span>
+    </h1>
+    <blockquote><i>“Creativity is Intelligence having fun” ~ Albert Einstein</i></blockquote>
+    <style>
+        .title{
+            width: 100%;
+            height: 100vh;
+            height: 100svh;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .title h1{
+            width: 100%;
+            height: auto;
+        }
+        .title-text{
+            width: 100%;
+            color: #6F7C8D;
+            font-size: 50%;
+            font-family: "lato", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+        }
+        
+        .title-highlight{
+            color: #6F7C8D;
+            color: #152428;
+            text-transform: uppercase;
+        }
+        
+        #changing-text{
+            width: 100%;
+            color: #152428;
+            color: #6F7C8D;
+            font-size: 100%;
+            letter-spacing: 8px;
+            backdrop-filter: blur(0);
+            animation: textChange 6s infinite;
+        }
+    
+    @keyframes textChange{
+        0%{
+            opacity: 0;
+            filter: blur(64px);
+            backdrop-filter: blur(32px);
+        }
+        33%{
+            opacity: 1;
+            filter: blur(0);
+            backdrop-filter: blur(0);
+        }
+        66%{
+            opacity: 1;
+            filter: blur(0);
+            backdrop-filter: blur(0);
+        }
+        100%{
+            filter: blur(64px);
+            backdrop-filter: blur(32px);
+            opacity: 0;
+        }
+    }
+    </style>
+    
+</header>
 
+    
     <main class="content">
         <section class="about">
             <figure>
@@ -70,14 +138,4 @@
 </body>
 </html>
 
-<style>
-    header{
-    height: 100vh;
-    height: 100svh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-</style>
+
