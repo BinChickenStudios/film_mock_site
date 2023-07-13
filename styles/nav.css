@@ -1,0 +1,150 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+nav *{
+    pointer-events: auto;
+}
+
+
+#navigate{
+    display: none;
+    opacity: 0;
+}
+
+.nav-title, .nav-title .highlight{
+    mix-blend-mode: difference;
+    font-size: 2rem;
+    font-family: "barge", sans-serif;
+    font-weight: normal;
+}
+
+.nav-title{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    letter-spacing: 6px;
+}
+
+
+
+.nav-button{
+    opacity: 0.75;
+    display: flex;
+    align-items: center;  
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#navigate:checked ~ .nav-title{
+    display: none;
+}
+
+.nav-button > span,
+.nav-button > span::before,
+.nav-button > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #6F7C8D;
+  transition: 0.3s;
+}
+.nav-button > span::before {
+  content: '';
+  top: -8px;
+}
+.nav-button > span::after {
+  content: '';
+  top: 8px;
+}
+
+#navigate:checked ~ .nav-button > span {
+    transform: rotate(45deg);
+    background-color: #DEE2E7;
+  }
+  
+#navigate:checked ~ .nav-button > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #DEE2E7;
+}
+  
+#navigate:checked ~ .nav-button > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #DEE2E7;
+}
+  
+#navigate:checked ~ .nav-button {
+    visibility: visible;
+}
+
+
+.nav-menu{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: translate(100%);
+}
+
+.nav-menu a{
+    width: 100%;
+    height: 100%;
+}
+
+#nav-contact{
+    background-color: #152428;
+    color: #DEE2E7;
+}
+
+#nav-gallery{
+    background-color: #DEE2E7;
+    color: #152428;
+}
+
+#nav-about{
+    background-color: #6F7C8D;
+    color: #DEE2E7;
+}
+
+.nav-menu a div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navigate:checked ~ .nav-menu{
+    display: flex;
+    overflow: hidden;
+    /* animation: navSlide 1s ease-in-out; */
+    transform: translate(0%);
+}
+
+@keyframes navSlide {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

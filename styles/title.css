@@ -1,0 +1,60 @@
+    .title-screen {
+        height: 100vh;
+        height: 100svh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .title span {
+        display: inline-block;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        hyphens: auto;
+    }
+
+    .title-text {
+        color: #6F7C8D;
+        font-size: 3rem;
+        font-family: "lato", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+    }
+
+
+    .title-name {
+        color: #152428;
+        color: #6F7C8D;
+        letter-spacing: 8px;
+        backdrop-filter: blur(0);
+        animation: textChange 6s infinite;
+    }
+
+    @keyframes textChange {
+        0% {
+            opacity: 0;
+            filter: blur(64px);
+            backdrop-filter: blur(32px);
+        }
+
+        33% {
+            opacity: 1;
+            filter: blur(0);
+            backdrop-filter: blur(0);
+        }
+
+        66% {
+            opacity: 1;
+            filter: blur(0);
+            backdrop-filter: blur(0);
+        }
+
+        100% {
+            filter: blur(64px);
+            backdrop-filter: blur(32px);
+            opacity: 0;
+        }
+    }

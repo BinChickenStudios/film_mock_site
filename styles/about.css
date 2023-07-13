@@ -1,0 +1,13 @@
+.about{
+    max-height: 100vh;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.about img{
+    position: relative;
+    width: 50%;
+    height: auto;
+}

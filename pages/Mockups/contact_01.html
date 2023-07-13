@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us | MOCK SITE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            <img src="burger.png" alt="burger icon">
+        </button>
+        <!--the selection of the drop down menu-->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <a href="showcase.html">Showcase</a>
+                <a href="About.html">Meet the team</a>
+                <a href="contact.html">Contact us</a>
+                <!-- Add more page links as needed -->
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="content">
+    <h1 hidden>CALL ME ON *insert number here*</h1>
+    <section>
+      <h2 hidden>call me baby</h2>
+      <p hidden>prettiness if you want... not necessary
+        list of options
+        - book a meeting
+        - quote request
+        - say hello
+        form on right side adjusts relative to selected option
+        submit button
+      </p>
+      <button hidden>call me on *insert number here*</button>
+      
+      <form action="send_email.php" method="POST">
+        <div class="subject">
+        <label>Reason for Contact:</label>
+        <div>
+          <input type="radio" id="meeting" name="subject" value="meeting" checked>
+          <label for="meeting">Schedule Meeting</label>
+        </div>
+        <div>
+          <input type="radio" id="quote" name="subject" value="quote">
+          <label for="quote">Request A Quote</label>
+        </div>
+        <div>
+          <input type="radio" id="hello" name="subject" value="hello">
+          <label for="hello">Say Hello</label>
+        </div>
+      </div>
+
+      <div class="information">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+      
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      
+        <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="contact-info">
+        <h3>Contact Information</h3>
+        <ul>
+            <li><i class="fas fa-phone"></i> *insert number here*</li>
+            <li><i class="fas fa-envelope"></i> *insert email here*</li>
+        </ul>
+    </div>
+    <div class="copyright">2023 MOCK SITE All rights reserved.</div>
+</footer>
+
+</body>
+
+</html>
