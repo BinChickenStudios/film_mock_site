@@ -4,7 +4,7 @@ const traits = [
     'Craftsmanship', 
     'Mastery', 
     'Precision', 
-    'Cine Manuel'
+    "Cine Manuel"
 ];
 
 

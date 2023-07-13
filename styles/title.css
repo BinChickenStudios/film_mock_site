@@ -1,3 +1,7 @@
+    .title{
+        line-height: 0.5;
+    }
+    
     .title-screen {
         height: 100vh;
         height: 100svh;
@@ -10,15 +14,15 @@
     }
 
     .title span {
-        display: inline-block;
         word-wrap: break-word;
         white-space: pre-wrap;
         hyphens: auto;
+
     }
 
     .title-text {
-        color: #6F7C8D;
-        font-size: 3rem;
+        color: var(--mid-color);
+        font-size: 2rem;
         font-family: "lato", sans-serif;
         text-transform: uppercase;
         letter-spacing: 6px;
@@ -26,11 +30,12 @@
 
 
     .title-name {
-        color: #152428;
-        color: #6F7C8D;
+        color: var(--mid-color);
+        font-size: 4rem;
         letter-spacing: 8px;
+        white-space: nowrap;
         backdrop-filter: blur(0);
-        animation: textChange 6s infinite;
+        /* animation: textChange 6s infinite; */
     }
 
     @keyframes textChange {
