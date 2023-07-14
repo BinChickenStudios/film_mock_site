@@ -35,7 +35,7 @@
         letter-spacing: 8px;
         white-space: nowrap;
         backdrop-filter: blur(0);
-        /* animation: textChange 6s infinite; */
+        animation: textChange 6s infinite;
     }
 
     @keyframes textChange {
