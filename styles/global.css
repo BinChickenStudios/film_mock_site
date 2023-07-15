@@ -11,8 +11,6 @@
     --title-max: 10rem;
 }
 
-
-
 html{
     background-color: var(--light-color);
     color: var(--mid-color);
@@ -92,6 +90,12 @@ div, section, article, figure{
     flex-direction: column;
 }
 
+main{
+    min-height: 100vh;
+    min-height: 100svh;
+    width: auto;
+}
+
 section{
     padding: 5%;
     min-height: 100vh;
@@ -101,7 +105,10 @@ section{
     overflow: hidden;
 }
 
-
+img{
+    width: 100%;
+    height: auto;
+}
 
 .highlight {
     color: #152428;

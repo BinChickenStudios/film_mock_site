@@ -1,0 +1,81 @@
+.meet-the-team{
+
+}
+.meet-the-team input{
+    display: none;
+    opacity: 0;
+}
+
+.meet-the-team label{
+
+}
+
+.team-image{
+    width: 100%;
+    padding: 33.3% 0;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../assets/cinemanuel/team/Team_image_mono.jpg');
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    
+}
+
+.meet-the-team label:hover, .meet-the-team input:checked + label{
+    color: var(--dark-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+.member{
+    opacity: 0;
+    display: none;
+}
+
+
+#Team:checked ~ .all{
+    opacity: 1;
+    display: block;
+}
+
+#Team:checked ~ .team-image{
+    background-image: 
+    url('../assets/cinemanuel/team/Team_image_color.jpg');
+}
+
+#Jayden:checked ~ .jayden{
+    opacity: 1;
+    display: block;
+}
+
+#Jayden:checked ~ .team-image{
+    background-image: 
+    url('../assets/cinemanuel/team/Jayden\ Cutout-color.png'),
+    url('../assets/cinemanuel/team/Team_image_mono.jpg');
+}
+
+
+#Immanuel:checked ~ .immanuel{
+    opacity: 1;
+    display: block;
+}
+
+#Immanuel:checked ~ .team-image{
+    background-image: 
+    url('../assets/cinemanuel/team/Immanuel\ Cutout-color.png'),
+    url('../assets/cinemanuel/team/Team_image_mono.jpg');
+}
+
+#Rayan:checked ~ .rayan{
+    opacity: 1;
+    display: block;
+}
+
+#Rayan:checked ~ .team-image{
+    background-image: 
+    url('../assets/cinemanuel/team/Rayan\ Cutout-color.png'),
+    url('../assets/cinemanuel/team/Team_image_mono.jpg');
+}
+
