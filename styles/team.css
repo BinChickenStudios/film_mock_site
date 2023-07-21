@@ -1,33 +1,132 @@
-#image-container {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
+.member p{
+    display: none;
 }
 
-img {
-    position: absolute;
+.meet-team{
+    position: relative;
+}
+
+.meet-team img {
+    position: relative;
     top: 0;
-    left: 0;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
     filter: grayscale(100%);
 }
 
-.collider{
+.member img{
     position: absolute;
+    /* filter: grayscale(0); */
+    z-index: 1;
+}
+
+.meet-team input{
+    display: none;
+    opacity: 0;
+}
+
+.meet-team label{
+    position: absolute;
+    cursor: pointer;
+    pointer-events: none;
+    display: flex;
+    width: 90vw;
+    height: calc(120vw / 2);
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.meet-team label span{
+    display: block;
+    position: absolute;
+    pointer-events: auto;
+    /* background-color: green; */
+    /* opacity: 25%; */
+    z-index: 5;
+}
+
+.meet-team label[for=Team] span{
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 5;
 }
 
-.ray{
-
+.meet-team label[for=Jayden] span{
+    top: 25%;
+    bottom: 0;
+    left: 0;
+    right: 55%;
+    z-index: 8;
 }
 
-.immanuel{
-
+.meet-team label[for=Immanuel] span{
+    top: 15%;
+    bottom: 50%;
+    left: 40%;
+    right: 30%;
+    z-index: 6;
 }
 
-.jayden{
+.meet-team label[for=Rayan] span{
+    top: 21%;
+    bottom: 0;
+    left: 62%;
+    right: 10%;
+    z-index: 7;
+}
 
+
+.meet-team label:hover ~ .member{
+    
+}
+
+.meet-team label[for=Team]:hover ~ .member .Team img{
+    filter: grayscale(50%);
+}
+
+.meet-team #Team:checked ~ .member .Team img{
+    /* filter: grayscale(0); */
+}
+
+.meet-team #Team:checked ~ .member .Team p{
+    display: block;
+}
+
+.meet-team label[for=Jayden]:hover ~ .member .Jayden img{
+    filter: grayscale(50%);
+}
+
+.meet-team #Jayden:checked ~ .member .Jayden img{
+    filter: grayscale(0);
+}
+
+.meet-team #Jayden:checked ~ .member .Jayden p{
+    display: block;
+}
+
+.meet-team label[for=Immanuel]:hover ~ .member .Immanuel img{
+    filter: grayscale(50%);
+}
+
+.meet-team #Immanuel:checked ~ .member .Immanuel img{
+    filter: grayscale(0);
+}
+
+.meet-team #Immanuel:checked ~ .member .Immanuel p{
+    display: block;
+}
+
+.meet-team label[for=Rayan]:hover ~ .member .Rayan img{
+    filter: grayscale(50%);
+}
+
+.meet-team #Rayan:checked ~ .member .Rayan img{
+    filter: grayscale(0);
+}
+
+.meet-team #Rayan:checked ~ .member .Rayan p{
+    display: block;
 }

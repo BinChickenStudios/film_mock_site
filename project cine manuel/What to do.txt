@@ -1,0 +1,28 @@
+What to do:
+- gear page
+- scope page
+- gallery page
+
+- update WIP page
+
+- optimize site
+- validate emails
+- fix up inputs
+
+- SVG animation analysis
+- title needs to have inversion / transparency
+
+
+
+bugs:
+-  cine manuel title animation
+- laggy and looping cinemanuel productions (flickering too)
+- huge gap between brand and footer (should that be there?)
+- image of members needs to be interactable
+
+
+nice things to add:
+- hover animation for
+  - nav buttons
+  - instagram icon
+- animate on scroll

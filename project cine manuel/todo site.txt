@@ -1,0 +1,70 @@
+only the 3 colors...
+
+BODY:
+same color all the way through (done)
+
+
+NAV:
+burger bar - to the right (done)
+add title - 'cine manuel' (font for title) (done)
+add transparency / invert color idea (done...)
+
+
+HEADER:
+"looking for" (the a1 font needs to be smaller) (done)
+"cine manuel" (same size as is or bigger) (done)
+background textured bg would be nice (https://www.magicpattern.design/tools/css-backgrounds)? (done?)
+
+- cine-manuel should be the white color and specific letters will be the grey color (done)
+
+- craftsmanship, (done)
+- mastery, (done)
+- precision (done)
+
+
+showreel:
+showreel is not a section... or if it is, its more of a overlay kinda thing (it wont work without javascript)
+showreel glide (kinda like a fixed from a to b thing)
+
+gallery:
+sit on it (maybe remove it temporarily) (done)
+
+About:
+logo above (done)
+
+ul li no dot points (remove the lines) (done)
+
+Brand:
+
+
+Footer:
+25% height
+
+anchor to what gear we use (gear.html)
+what is our scope of work (scope.html)
+
+
+about us page / in general:
+- 4 CTAs
+- hover over person event... 
+  - either color them in or black and white them
+  - show text (right or bottom or somewhere) explaining who _____ is
+  - 
+
+
+contact us:
+- hiring option (done)
+  - whats your specialty (not yet)
+  - role you wanna go into (not yet)
+  - attach resume (done)
+
+how did you find us?
+
+
+entire website mapping to be complete (go to every page)
+- temp page saying "working in progress"... (done)
+
+thumbnail for website (done)
+
+
+
