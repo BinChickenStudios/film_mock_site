@@ -1,0 +1,45 @@
+:root{
+    --slider-width: 5632px;
+    --slider-height: 512px;
+    --slider-aspect: 1;
+}
+
+
+.slider{
+    position: relative;
+    height: 50%;
+    width: 100%;
+}
+
+.slider-content{
+    width: calc(var(--slider-width) * var(--slider-aspect));
+    height: calc(var(--slider-height) * var(--slider-aspect));
+    background-image: url(../assets/brands/Brands\ Slider.png);
+    background-size: 
+    calc(var(--slider-width) * var(--slider-aspect)) 
+    calc(var(--slider-height) * var(--slider-aspect));
+    -webkit-animation: slide 10s linear infinite;
+        animation: slide 10s linear infinite;
+}
+
+
+@-webkit-keyframes slide{
+    from {
+        background-position-x: 0;
+      }
+      to {
+        background-position-x: calc(var(--slider-width) * var(--slider-aspect) * -1);
+      }
+}
+
+
+@keyframes slide{
+    from {
+        background-position-x: 0;
+      }
+      to {
+        background-position-x: calc(var(--slider-width) * var(--slider-aspect) * -1);
+      }
+}
+
+
