@@ -5,7 +5,8 @@
     .title-screen {
         height: 100vh;
         height: 100svh;
-        width: 100%;
+        width: 100vw;
+        width: 100svw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -15,9 +16,13 @@
 
     .title span {
         word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
         white-space: pre-wrap;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
         hyphens: auto;
-
     }
 
     .title-text {
