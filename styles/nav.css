@@ -21,11 +21,24 @@ nav *{
 }
 
 .nav-title, .nav-title .highlight{
-    mix-blend-mode: difference;
     font-size: 2rem;
     font-family: "barge", sans-serif;
     font-weight: normal;
-    opacity: 0.75;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00000033;
+    z-index: 9999;
+}
+
+.mult{
+    mix-blend-mode: multiply;
+}
+
+.diff{
+    mix-blend-mode: difference;
+}
+
+.lum{
+    mix-blend-mode: screen;
 }
 
 .nav-title{
@@ -34,8 +47,6 @@ nav *{
     left: 20px;
     letter-spacing: 6px;
 }
-
-
 
 .nav-button{
     opacity: 0.75;
@@ -130,3 +141,4 @@ nav *{
         transform: translateX(0%);
     }
 }
+
