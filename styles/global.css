@@ -85,6 +85,11 @@ button:hover{
     color: var(--dark-color);
 }
 
+button:active{
+    color: var(--dark-color);
+    transform: translateY(2px);
+}
+
 div, section, article, figure{
     display: flex;
     flex-direction: column;
