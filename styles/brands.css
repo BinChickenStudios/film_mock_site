@@ -7,7 +7,7 @@
     --slider-width: calc(var(--slider-height) * var(--slider-amount));
 
     height: var(--slider-height);
-    width: var(--slider-width);
+    width: 100%;
   }
   
   .slider-content {
