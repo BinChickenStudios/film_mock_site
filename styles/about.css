@@ -3,6 +3,26 @@
     flex-direction: row;
     width: 100%;
 }
+
+.about-logo{
+    position: relative;
+    /* --about-width: 50%;
+    --about-height: 50%;
+    --about-ratio: calc(var(--about-width) / var(--about-height) * 100); */
+    width: 50%; /* image width */
+    height: 50%; /* image height */
+    padding-top: 50%; /* image ratio in % (image width / image height) * 100 */
+    background-image: url("../assets/cinemanuel/Final_CM\ Logo\ Animation_GIF-1024-1024-no-loop.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 100ms;
+}
+
+.about-logo:hover{
+    cursor: pointer;
+    background-image: url("../assets/cinemanuel/Final_CM\ Logo\ Animation_GIF.gif");
+}
+
 .about img{
     position: relative;
     width: 40%;
