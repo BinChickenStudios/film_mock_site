@@ -1,4 +1,4 @@
-import { changeText, highlightFirstLetterInWords } from "./utils/text.js";
+import { changeText, highlightFirstLetterInWords, highlightText } from "./utils/text.js";
 
 const traits = [
     'Craftsmanship', 
@@ -26,7 +26,12 @@ function changeTitle(titleElement, texts){
     }
 
     textIndex %= texts.length; 
-    const text = highlightFirstLetterInWords(texts[textIndex]);
+    let text = '';
+    if(textIndex < texts.length - 1){
+         text = highlightFirstLetterInWords(texts[textIndex]);
+    }else{
+         text = highlightText(texts[textIndex]);
+    }
     changeText(titleElement, text);
     textIndex = (textIndex + 1) % texts.length;
 }

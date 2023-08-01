@@ -1,14 +1,13 @@
 .about-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
 }
 
 .about-logo{
     position: relative;
-    /* --about-width: 50%;
-    --about-height: 50%;
-    --about-ratio: calc(var(--about-width) / var(--about-height) * 100); */
     width: 50%; /* image width */
     height: 50%; /* image height */
     padding-top: 50%; /* image ratio in % (image width / image height) * 100 */
@@ -21,6 +20,10 @@
 .about-logo:hover{
     cursor: pointer;
     background-image: url("../assets/cinemanuel/Final_CM\ Logo\ Animation_GIF.gif");
+}
+
+.about-text{
+    width: 50%;
 }
 
 .about img{

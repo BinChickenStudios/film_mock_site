@@ -46,7 +46,7 @@
     @keyframes textChange {
         0% {
             opacity: 0;
-            filter: blur(64px);
+            filter: blur(6rem);
             backdrop-filter: blur(32px);
         }
 
@@ -63,7 +63,7 @@
         }
 
         100% {
-            filter: blur(64px);
+            filter: blur(6rem);
             backdrop-filter: blur(32px);
             opacity: 0;
         }
