@@ -45,5 +45,9 @@
     .slider{
         grid-column: 1 / span 2;
     }
+
+    .about-title{
+        grid-column: 1 / span 2;
+    }
 }
 
