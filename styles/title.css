@@ -12,9 +12,10 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        transition: height 300ms ease;
     }
 
-    .title span {
+    .title-screen {
         word-wrap: break-word;
         overflow-wrap: break-word;
         overflow-wrap: anywhere;
@@ -27,20 +28,20 @@
 
     .title-text {
         color: var(--mid-color);
-        font-size: 2rem;
+        font-size: 1em;
         font-family: "lato", sans-serif;
         text-transform: uppercase;
         letter-spacing: 6px;
     }
 
 
-    .title-name {
+    .title-name, .about-name{
+        margin: 0;
         color: var(--mid-color);
         font-size: 4rem;
         letter-spacing: 8px;
-        white-space: nowrap;
         backdrop-filter: blur(0);
-        animation: textChange 6s infinite;
+        animation: textChange 3000ms infinite;
     }
 
     @keyframes textChange {
@@ -48,23 +49,28 @@
             opacity: 0;
             filter: blur(6rem);
             backdrop-filter: blur(32px);
+            /* transform: translateY(100px); */
         }
 
         33% {
             opacity: 1;
             filter: blur(0);
             backdrop-filter: blur(0);
+            /* transform: translateY(0); */
         }
 
         66% {
             opacity: 1;
             filter: blur(0);
             backdrop-filter: blur(0);
+            /* transform: translateY(0); */
+
         }
 
         100% {
+            opacity: 0;
             filter: blur(6rem);
             backdrop-filter: blur(32px);
-            opacity: 0;
+            /* transform: translateY(100px); */
         }
     }

@@ -1,33 +1,49 @@
 .about-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 16px;
 }
+
 
 .about-logo{
-    position: relative;
-    width: 50%; /* image width */
-    height: 50%; /* image height */
-    padding-top: 50%; /* image ratio in % (image width / image height) * 100 */
-    background-image: url("../assets/cinemanuel/Final_CM\ Logo\ Animation_GIF-1024-1024-no-loop.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: background-image 100ms;
-}
-
-.about-logo:hover{
-    cursor: pointer;
-    background-image: url("../assets/cinemanuel/Final_CM\ Logo\ Animation_GIF.gif");
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-text{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.about img{
-    position: relative;
-    width: 40%;
+.about-logo img{
+    width: 100%;
     height: auto;
+    max-width: 100%;
 }
+
+.about-text p{
+    font-size: 1.2rem;
+}
+
+.about-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+
+@media screen and (min-width: 600px){
+    .about-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .slider{
+        grid-column: 1 / span 2;
+    }
+}
+

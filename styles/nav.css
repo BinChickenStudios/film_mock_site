@@ -21,6 +21,7 @@ nav *{
 }
 
 .nav-title, .nav-title .highlight{
+    color: white;
     font-size: 3rem;
     font-family: "barge", sans-serif;
     font-weight: normal;
