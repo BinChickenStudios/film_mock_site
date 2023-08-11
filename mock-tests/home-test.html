@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Cine Manuel - Film & Cinematography Services</title>
+</head>
+<body>
+    <header>
+        <header>
+            <h1>Cine Manuel</h1>
+            <nav>
+                <ul id="navList">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div id="menuToggle" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </header>
+        
+
+    <main id="home">
+        <!-- Animated Showreel Placeholder -->
+        <section class="showreel">
+            <video controls autoplay loop muted>
+                <source src="../assets/test/videos/naruto.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Our Latest Works</h2>
+        </section>
+
+        <section class="intro" id="services">
+            <h2>Welcome to Cine Manuel</h2>
+            <p>Your one-stop solution for all film and cinematography needs.</p>
+        </section>
+        
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Film Production</li>
+                <li>Cinematography</li>
+                <li>Post-production Editing</li>
+                <li>Equipment Rental</li>
+            </ul>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="portfolio" id="portfolio">
+            <h2>Portfolio</h2>
+            <!-- Portfolio items go here -->
+            <div class="portfolio-item">
+                <img src="path_to_image1.jpg" alt="Project 1">
+                <p>Project 1 description</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="path_to_image2.jpg" alt="Project 2">
+                <p>Project 2 description</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Cine Manuel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

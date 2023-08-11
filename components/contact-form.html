@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form Mockup</title>
+    <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <style>
+.lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%; /* Set a fixed width */
+    max-width: 90%; /* Make sure it doesn't exceed screen width on small screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;  /* Make sure padding is included in the width */
+}
+
+/* Optional: You may also want to style the headings and paragraphs for better presentation. */
+.lightbox h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.lightbox p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /* separates the buttons */
+    margin-top: 20px;  /* Space from content to buttons */
+}
+
+/* For the buttons' position */
+.lightbox button {
+    width: 80px;  /* Setting a fixed width for the buttons */
+    margin-top: 20px;  /* Space from content to buttons */
+    height: 40px; 
+    cursor: pointer;
+}
+
+/* Previous button on the bottom left */
+.lightbox button:first-child {
+    align-self: flex-start;
+}
+
+/* Next/Submit button on the bottom right */
+.lightbox button:last-child {
+    align-self: flex-end;
+}
+
+.steps {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 5%; /* Optional: Add padding to sides if needed */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #f6f6f6; /* Or any background color you prefer */
+}
+
+
+.steps input[type="radio"] {
+    appearance: none; /* Removes default browser appearance */
+    -webkit-appearance: none; /* For older browsers */
+    -moz-appearance: none; /* For Firefox */
+    display: inline-block;
+    margin: 0;
+    background: none;
+    border: none;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Default appearance using pseudo-element */
+.steps input[type="radio"]::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: red; /* Default color for unchecked radios */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* For checked radios */
+.steps input[type="radio"]:checked::before {
+    background-color: green;
+    animation: breathe 1.5s infinite; /* Applying the breathe animation */
+}
+
+/* For radios that come after a checked one (i.e., previously checked) */
+.steps input[type="radio"]:checked ~ input[type="radio"]::before {
+    background-color: #b0e57c; /* A light green as you described */
+}
+
+/* Breathe animation definition remains the same */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Creates the line connecting the radios */
+.steps::before {
+    content: "";
+    position: absolute;
+    left: 5%; /* Matches the padding on the .steps element */
+    right: 5%; /* Matches the padding on the .steps element */
+    height: 1px;
+    background: #000; /* Color of the connecting line */
+    top: 50%;
+    z-index: 1;
+}
+    
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* For horizontal layout of first name and last name */
+#step2 input[type="text"] {
+    width: 49%; /* Giving space for margins */
+}
+
+#step2 input[type="text"]:first-child {
+    margin-right: 2%; /* Space between the first name and last name */
+}
+    </style>
+    <script>
+    function nextStep(step) {
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById('step' + i).style.visibility = 'hidden';
+            document.getElementById('step' + i).style.opacity = '0';
+            document.getElementById('radioStep' + i).checked = false;
+        }
+        document.getElementById('step' + step).style.visibility = 'visible';
+        document.getElementById('step' + step).style.opacity = '1';
+        document.getElementById('radioStep' + step).checked = true;
+    }
+    
+    function previousStep(step) {
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById('step' + i).style.visibility = 'hidden';
+            document.getElementById('step' + i).style.opacity = '0';
+            document.getElementById('radioStep' + i).checked = false;
+        }
+        document.getElementById('step' + step).style.visibility = 'visible';
+        document.getElementById('step' + step).style.opacity = '1';
+        document.getElementById('radioStep' + step).checked = true;
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        nextStep(1);
+    
+        // Listening for changes in radio buttons
+        let radios = document.querySelectorAll('.steps input[type="radio"]');
+        radios.forEach((radio, index) => {
+            radio.addEventListener('change', () => {
+                nextStep(index + 1);
+            });
+        });
+    });
+    
+    </script>
+</head>
+<body>
+    <div class="lightbox" id="step1">
+        <h2>Step 1: Reason for Contact</h2>
+        <p>Select the reason why you're reaching out to us.</p>
+        <!-- ... radio buttons ... -->
+        <input type="radio" name="reason" value="business_inquiry"> Business Inquiry<br>
+        <input type="radio" name="reason" value="quote"> Quote<br>
+        <input type="radio" name="reason" value="career_opportunity"> Career Opportunity<br>
+        <input type="radio" name="reason" value="general"> General<br>
+        <div class="button-container">
+        <button onclick="nextStep(2)">Next</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="step2">
+        <h2>Step 2: Your Name</h2>
+        <p>Let us know how we can address you.</p>
+        <!-- ... input fields ... -->
+        <input type="text" placeholder="First Name" required> 
+        <input type="text" placeholder="Last Name" required><br>
+        <input type="text" placeholder="Optional Business Name"><br>
+        <div class="button-container">
+        <button onclick="previousStep(1)">Back</button>
+        <button onclick="nextStep(3)">Next</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="step3">
+        <h2>Step 3: Email</h2>
+        <p>Provide your email so we can get back to you.</p>
+        <!-- ... input fields ... -->
+        <input type="email" placeholder="Email"><br>
+        <div class="button-container">
+        <button onclick="previousStep(2)">Back</button>
+        <button onclick="nextStep(4)">Next</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="step4">
+        <h2>Step 4: Phone Number</h2>
+        <p>Your contact number, in case we need a direct conversation.</p>
+        <!-- ... input fields ... -->
+        <input type="tel" placeholder="Phone Number"><br>
+        <div class="button-container">
+        <button onclick="previousStep(3)">Back</button>
+        <button onclick="nextStep(5)">Next</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="step5">
+        <h2>Step 5: Your Message</h2>
+        <p>Let us know in detail why you're contacting us.</p>
+        <!-- ... textarea ... -->
+        <textarea placeholder="Your Message"></textarea><br>
+        <div class="button-container">
+        <button onclick="previousStep(4)">Back</button>
+        <button>Submit</button>
+        </div>
+    </div>
+
+    <div class="steps">
+        <input type="radio" id="radioStep1">
+        <input type="radio" id="radioStep2">
+        <input type="radio" id="radioStep3">
+        <input type="radio" id="radioStep4">
+        <input type="radio" id="radioStep5">
+    </div>
+</body>
+</html>
