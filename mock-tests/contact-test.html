@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/cinemanuel/CM_Logo_Icon 128x128.png" type="image/png">
+    <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <!-- <link rel="stylesheet" href="../styles/contact.css"> -->
+  <title>Contact Us</title>
+</head>
+<body>
+    <main class="content">
+        <section class="contact">
+            <form id="contact-form">
+                <label for="subject">Subject:</label>
+                <input type="radio" name="subject" value="general" id="general">
+                <label for="general">General</label><br>
+                <input type="radio" name="subject" value="quote" id="quote">
+                <label for="quote">Quote</label><br>
+                <input type="radio" name="subject" value="career" id="career">
+                <label for="career">Career</label><br>
+                <input type="radio" name="subject" value="meeting" id="meeting">
+                <label for="meeting">Meeting</label><br>
+                <div class="contact-card">
+                    <div class="row">
+                        <input type="text" name="first-name" placeholder="First Name" required>
+                        <input type="text" name="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div class="row">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone-number" placeholder="Phone Number" required>
+                    </div>
+                    <div id="budget" class="row optional">
+                        <input type="number" name="budget" placeholder="Budget">
+                    </div>
+                    <div id="preferred-date" class="row optional">
+                        <input type="date" name="preferred-date" placeholder="Preferred Date">
+                    </div>
+                    <div id="resume" class="row optional">
+                        <input type="file" name="resume" accept=".pdf, .doc, .docx">
+                    </div>
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+    </section>
+    </main>
+</body>
+</html>
+<style>
+#contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#contact-form label,
+#contact-form input[type="radio"] {
+    grid-column: 1;
+}
+
+.information{
+    grid-column: 2;
+    display: grid;
+    /* transform:translateY(-250px); */
+}
+
+.row input, .row textarea, .row button {
+    padding: 10px;
+}
+
+.optional {
+  display: none;
+  grid-column: span 2;
+}
+
+textarea {
+  height: 100px;
+  grid-column: span 2;
+}
+
+
+button[type="submit"]{
+    grid-column: span 2;
+}
+
+/* Custom Radio Button Styling */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  line-height: 20px;
+  display: block;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+}
+
+input[type="radio"]:checked + label:before {
+  background-color: #e1e1e1;
+}
+
+input[type="radio"] + label:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+  background-color: #333;
+}
+
+/* Show budget field when 'quote' is selected */
+#quote:checked ~ .information #budget {
+  display: flex;
+}
+
+/* Show preferred date field when 'meeting' is selected */
+#meeting:checked ~ .information #preferred-date {
+  display: flex;
+}
+
+/* Show resume field when 'career' is selected */
+#career:checked ~ .information #resume {
+  display: flex;
+}
+
+  </style>
+<script>
+
+    // const subjectRadios = document.querySelectorAll('input[name="subject"]');
+    // const budgetDiv = document.getElementById('budget');
+    // const preferredDateDiv = document.getElementById('preferred-date');
+    // const resumeDiv = document.getElementById('resume');
+    
+    // subjectRadios.forEach(radio => {
+    //   radio.addEventListener('change', function() {
+    //     budgetDiv.style.display = this.value === 'quote' ? 'flex' : 'none';
+    //     preferredDateDiv.style.display = this.value === 'meeting' ? 'flex' : 'none';
+    //     resumeDiv.style.display = this.value === 'career' ? 'flex' : 'none';
+    //   });
+    // });
+    </script>

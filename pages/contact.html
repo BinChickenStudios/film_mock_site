@@ -9,331 +9,139 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     
     <title>Page Mockup</title>
 </head>
 <body>
+    <a href="../pages/home.html"><span class="nav-title diff"><span class="highlight">C</span>ine <span class="highlight">M</span>anuel</span></a>
     <nav>
-        <a href="../pages/home.html"><span class="nav-title"><span class="highlight">C</span>ine <span class="highlight">M</span>anuel</span></a>
-            
+        <!-- <a href="../pages/home.html"><span class="nav-title"><span class="highlight">C</span>ine <span class="highlight">M</span>anuel</span></a> -->
         <input type="checkbox" name="navigate" id="navigate">
         <label class="nav-button" for="navigate">
             <span></span>
         </label>
         <div class="nav-menu">
-            <a href="../pages/home.html" id="nav-contact">Home</a>
+            <a href="../pages/contact.html" id="nav-contact">Contact Us</a>
             <a href="../pages/wip.html" id="nav-gallery">Gallery</a>
             <a href="../pages/team.html" id="nav-about">About Us</a>
         </div>
     </nav>
+
     <main class="content">
+
         <section class="contact">
-            <h2 class="contact-title">Contact Us</h2>
-            <form action="send_email.php" method="POST" class="contact-form">
-
-                <!-- <input class="subject-input" type="radio" name="subject" id="meeting" value="Meeting" checked>
-                <label class="subject" for="meeting">
-                    <span class="subject-radio"></span>
-                    <span class="subject-text">Schedule Meeting</span>
-                </label>
-                <input class="subject-input" type="radio" name="subject" id="quote" value="Quote">
-                <label class="subject" for="quote">
-                    <span class="subject-radio"></span>
-                    <span class="subject-text">Request A Quote</span>
-                </label>
-                <input class="subject-input" type="radio" name="subject" id="hello" value="Hello">
-                <label class="subject" for="hello">
-                    <span class="subject-radio"></span>
-                    <span class="subject-text">General Enquiry</span>
-                </label>
-                <input class="subject-input" type="radio" name="subject" id="resume" value="Resume">
-                <label class="subject" for="resume">
-                    <span class="subject-radio"></span>
-                    <span class="subject-text">Career with Cine Manuel</span>
-                </label> -->
-
-                <!-- drop down selectors (not possible to hide elements without javascript) -->
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject" required>
-                    <option value="meeting" id="meeting" selected>Schedule Meeting</option>
-                    <option value="quote" id="quote">Request A Quote</option>
-                    <option value="hello" id="hello">General Enquiry</option>
-                    <option value="resume" id="resume">Looking for work</option>
-                </select>
-    
-                <div class="information">
-                    
-                    <label for="first">First Name (*)</label>
-                    <input type="text" name="first" id="first" required pattern="^[A-Za-z]{3,15}$"
-                        title="Please enter letters only" placeholder="type first name here...">
-                    
-                    <label for="last">Last Name (*)</label>
-                    <input type="text" name="last" id="last" required pattern="^[A-Za-z/s]{3,15}$"
-                        title="Please enter letters only" placeholder="type last name here...">
-                    
-                    <label for="email">Email Address (*)</label>
-                    <input type="email" name="email" id="email"
-                        title="Please enter a valid email address" placeholder="johnsmith@email.com...">
-                    
-                    <label for="code">Country Code</label>
-                    <input type="text" name="code" id="code" pattern="^\+\d{1,3}$"
-                        title="Please enter a valid country code" placeholder="+123">
-                    
-                    <label for="phone">Phone Number</label>
-                    <input type="text" name="phone" id="phone" pattern="^\d{4,15}$" placeholder="type phone number here..."
-                        title="Please enter a valid phone number">
-                    
-                    <div class="quote">
-                        <label for="budget">Budget</label>
-                        <input type="text" name="budget" id="budget" pattern="^[$]?[0-9]+(\.[0-9]{1,2})?$" placeholder="$0.00"
-                        title="please enter numbered currency">
+            <label class="contact-card-container" for="general">
+                <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="general">
+                <form class="contact-card">
+                    <div class="front">
+                        <h3>General</h3>
+                        <p>tap to reveal form</p>
                     </div>
-                    <div class="meeting">
-                        <label for="schedule">Preferred Date</label>
-                        <input type="date" name="schedule" id="schedule" min="2023-07-09">
-                    </div>
-                    <label for="message">Message (*)</label>
-                    <textarea name="message" id="message" required placeholder="type your message here..." min="3" max="500"></textarea>
-                    
-                    <!-- drop down (how did you find us?) -->
-    
-                    <div class="resume">
-                        <label for="attach">Attach Resume</label>
-                        <input type="file" name="attach" id="attach" accept=".pdf, .doc, .docx">
-                    </div>
-    
-                    <!-- <label for="submit">submit</label> -->
-                    <input type="submit" value="submit">
+                    <div class="back">
+                        <form class="contact-card">
+                            <h3>General</h3>
+                            <div class="input-row">
+                                <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                                <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                            </div>
+                            <input type="email" name="email" placeholder="Email" class="input-field">
+                            <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                        <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
                 </div>
-            </form>
-        </section>
-    </main>
-<footer>
-        <div class="production">
-            <!-- <p>Cine Manuel Productions uses only the best <a href="wip.html">gear</a> and our <a href="wip.html">scope</a> ranges through all the levels of media production.</p> -->
-        </div>
-        <div class="socials">
-            <!-- <a href="wip.html"><img src="..\socials\youtube.png" alt="youtube"></a> -->
-            <!-- <a href="wip.html"><img src="..\socials\facebook.png" alt="Facebook"></a> -->
-            <a href="https://www.instagram.com/cine_manuel/" class="instagram"><img src="../assets/socials/instagram.png" alt="Instagram"></a>
-            <!-- <a href="wip.html"><img src="..\socials\twitter.png" alt="Twitter"></a> -->
-            <!-- <a href="https://au.linkedin.com/in/rayan-heloui-aa94581b0"><img src="..\socials\linkedin.png" alt="linkedin"></a> -->
+            </label>
+            <label class="contact-card-container" for="quote">
+                <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="quote">
+                <form class="contact-card">
+                    <div class="front">
+                        <h3>Quote</h3>
+                        <p>tap to reveal form</p>
+                    </div>
+                    <div class="back">
+                        <form class="contact-card">
+                            <h3>Quote</h3>
+                            <div class="input-row">
+                                <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                                <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                            </div>
+                            <input type="email" name="email" placeholder="Email" class="input-field">
+                            <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                            <input type="number" name="budget" placeholder="Budget">
+                            <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                            <input type="submit" value="Submit" class="submit-button">
+                        </form>
+                    </div>
+                </label>
+                <label class="contact-card-container" for="meeting">
+                    <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="meeting">
+                    <form class="contact-card">
+                        <div class="front">
+                            <h3>Meeting</h3>
+                            <p>tap to reveal form</p>
+                        </div>
+                        <div class="back">
+                            <form class="contact-card">
+                                <h3>Meeting</h3>
+                                <div class="input-row">
+                                    <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                            <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                        </div>
+                        <input type="email" name="email" placeholder="Email" class="input-field">
+                        <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                        <input type="date" name="preferred-date" placeholder="Preferred Date">
+                        <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+            </label>
+            <label class="contact-card-container" for="careers">
+                <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="careers">
+                <form class="contact-card">
+                    <div class="front">
+                        <h3>Careers</h3>
+                        <p>tap to reveal form</p>
+                    </div>
+                    <div class="back">
+                        <form class="contact-card">
+                            <h3>Careers</h3>
+                            <div class="input-row">
+                                <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                                <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                            </div>
+                            <input type="email" name="email" placeholder="Email" class="input-field">
+                            <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                            <input type="file" name="resume" accept=".pdf, .doc, .docx">
+                            <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                            <input type="submit" value="Submit" class="submit-button">
+                        </form>
+                    </div>
+                </label>
+            </section>
+            </main>
+        <footer>
+            <div class="production">
+                <!-- <p>Cine Manuel Productions uses only the best <a href="wip.html">gear</a> and our <a href="wip.html">scope</a> ranges through all the levels of media production.</p> -->
+            </div>
+            <div class="socials">
+                <!-- <a href="wip.html"><img src="..\socials\youtube.png" alt="youtube"></a> -->
+                <!-- <a href="wip.html"><img src="..\socials\facebook.png" alt="Facebook"></a> -->
+                <a href="https://www.instagram.com/cine_manuel/" class="instagram"><img src="../assets/socials/instagram.png" alt="Instagram"></a>
+                <!-- <a href="wip.html"><img src="..\socials\twitter.png" alt="Twitter"></a> -->
+                <!-- <a href="https://au.linkedin.com/in/rayan-heloui-aa94581b0"><img src="..\socials\linkedin.png" alt="linkedin"></a> -->
+                
+            </div>
             
-        </div>
-        
         <!-- <div class="CTA">
             <p>Thinking of asking us something?</p> 
             <a href="contact.html"><button>Contact Us</button></a>
         </div> -->
-
+        
         <div class="legal">
             <blockquote>@ 2023 Cine Manuel Productions</blockquote>
             <blockquote>designed by Ibrahim Aouli</blockquote>
         </div>
-</footer>
+    </footer>
 </body>
 </html>
-
-<style>
-    .contact-form{
-        display: inline-flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    
-    /* input.subject[type="radio"]{
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 2px solid #000;
-        background-color: #fff;
-    }
-
-
-    input.subject[type="radio"]:checked{
-        background-color: black;
-    } */
-
-.contact-form{
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    text-align: center;
-}
-
-.subject-input{
-    display: none;
-    opacity: 0;
-}
-
-.subject{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 40%;
-    height: 12px;
-    margin: 4px 0;
-}
-
-.subject-radio{
-    min-height: 12px;
-    min-width: 12px;
-    background-color: black;
-    border-radius: 50%;
-    margin-right: 4px;
-    margin-bottom: -2px;
-}
-
-.subject-text {
-  white-space: nowrap;
-}
-
-.information{
-    display: flex;
-    flex-direction: column;
-    margin-top: 8px;
-}
-
-.meeting, .quote, .resume{
-    display: none;
-}
-
-#meeting:checked ~ .information .meeting{
-    display: block;  
-}
-
-#quote:checked ~ .information .quote{
-    display: block;
-}
-
-#resume:checked ~ .information .resume{
-    display: block;  
-}
-
-</style>
-
-
-<script>
-    import {
-    ASCII_VALID,
-    CURRENCY, 
-    EMAIL, 
-    FIRST_NAME, 
-    LAST_NAME, 
-    PHONE_CODE, 
-    PHONE_VALID,
-    FILES,
-    DOCUMENTS
-} from "../utils/regex";
-
-import { 
-    getValidatedInputValue, 
-    validateStringValue 
-} from "../utils/validate";
-
-// const textareas = document.getElementsByTagName('textarea');
-const submitButton = document.getElementById("submit");
-
-if(!submitButton){
-    console.log("no submit button was found, validation cannot be done here");
-    return;
-}else{
-    submitButton.addEventListener("click", function(event){
-        event.preventDefault();
-
-        if(!validateInputsByName()){
-            console.log("required inputs were missing, failed to send.");
-            return;
-        }
-
-        submitFormManually();
-    })
-}
-
-
-function validateContactForm(){
-    const subject = document.getElementsByName("subject");
-    const subjectValue = getValidatedInputValue(subject);
-    if(!subjectValue){
-        console.log("user didn't select valid subject");
-        return;
-    }
-    
-    const first = document.getElementsByName("first");
-    let firstValue = getValidatedInputValue(first, FIRST_NAME);
-    if(!firstValue){
-        console.log("user didn't input there first name");
-        return;
-    }
-    firstValue = capitalizeString(firstValue);
-    
-    const last = document.getElementsByName("last");
-    let lastValue = getValidatedInputValue(last, LAST_NAME);
-    if(!lastValue){
-        console.log("user didn't input there last name");
-        return;
-    }
-    lastValue = capitalizeString(lastValue);
-    
-    
-    const email = document.getElementsByName("email");
-    let emailValue = getValidatedInputValue(email, EMAIL);
-    if(!emailValue){
-        console.log("user didn't input valid email");
-        return;
-    }
-    
-    
-    const message = document.getElementsByName("message");
-    const messageValue = getValidatedInputValue(message);
-    if(!messageValue){
-        console.log("user didn't input in a valid message");
-        return;
-    }
-
-
-    const code = document.getElementsByName("code");
-    const codeValue = getValidatedInputValue(code, PHONE_CODE);
-    if(!codeValue){
-        console.log("user didn't input valid phone code");
-    }
-
-    const phone = document.getElementsByName("phone");
-    const phoneValue = getValidatedInputValue(phone, PHONE_VALID);
-    if(!phoneValue){
-        console.log("user didn't input valid phone number");
-    }
-    
-    if(subjectValue.toLowerCase() === "quote"){
-        const budget = document.getElementsByName("budget");
-        let budgetValue = getValidatedInputValue(budget, CURRENCY);
-        if(!budgetValue){
-            console.log("user didn't input valid budget");
-        }else{
-            budgetValue = parseFloat(budgetValue.replace(/[^0-9.-]+/g, ''));
-        }
-    }
-    
-    if(subjectValue.toLowerCase() === "meeting"){
-        const schedule = document.getElementsByName("schedule");
-        let scheduleDate = getValidatedInputValue(schedule);
-        if(!scheduleDate){
-            console.log("user didn't input valid date");
-        }
-
-    }
-    
-    const file = document.getElementsByName("file");
-    let fileValue = getValidatedInputValue(file, DOCUMENTS);
-    if(!fileValue){
-        console.log("user didn't upload valid file");
-    }
-}
-
-</script>

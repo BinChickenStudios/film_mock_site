@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <main class="content">
+        <label class="contact-card-container" for="general">
+            <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="general">
+            <form class="contact-card">
+                <div class="front">
+                    <h3>General</h3>
+                    <p>tap to reveal form</p>
+                </div>
+                <div class="back">
+                    <form class="contact-card">
+                        <h3>General</h3>
+                        <div class="input-row">
+                            <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                            <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                        </div>
+                        <input type="email" name="email" placeholder="Email" class="input-field">
+                        <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                        <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+            </label>
+        <label class="contact-card-container" for="quote">
+            <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="quote">
+            <form class="contact-card">
+                <div class="front">
+                    <h3>Quote</h3>
+                    <p>tap to reveal form</p>
+                </div>
+                <div class="back">
+                    <form class="contact-card">
+                    <h3>Quote</h3>
+                        <div class="input-row">
+                            <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                            <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                        </div>
+                        <input type="email" name="email" placeholder="Email" class="input-field">
+                        <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                        <input type="number" name="budget" placeholder="Budget">
+                        <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+        </label>
+        <label class="contact-card-container" for="meeting">
+            <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="meeting">
+            <form class="contact-card">
+                <div class="front">
+                    <h3>Meeting</h3>
+                    <p>tap to reveal form</p>
+                </div>
+                <div class="back">
+                    <form class="contact-card">
+                    <h3>Meeting</h3>
+                        <div class="input-row">
+                            <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                            <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                        </div>
+                        <input type="email" name="email" placeholder="Email" class="input-field">
+                        <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                        <input type="date" name="preferred-date" placeholder="Preferred Date">
+                        <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+        </label>
+        <label class="contact-card-container" for="careers">
+            <input type="radio" name="flip-toggle" class="flip-toggle" aria-hidden="true" id="careers">
+            <form class="contact-card">
+                <div class="front">
+                    <h3>Careers</h3>
+                    <p>tap to reveal form</p>
+                </div>
+                <div class="back">
+                    <form class="contact-card">
+                    <h3>Careers</h3>
+                        <div class="input-row">
+                            <input type="text" name="first_name" pattern="^[A-Za-z]{3,15}$" placeholder="First Name" class="input-field">
+                            <input type="text" name="last_name" pattern="^[A-Za-z/s]{3,15}$" placeholder="Last Name" class="input-field">
+                        </div>
+                        <input type="email" name="email" placeholder="Email" class="input-field">
+                        <input type="tel" name="phone" placeholder="Phone" class="input-field">
+                        <input type="file" name="resume" accept=".pdf, .doc, .docx">
+                        <textarea name="message" placeholder="Message" class="input-field"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+        </label>
+    </main>
+</body>
+</html>
+
+<style>
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+</style>
+
+<style>
+.contact-card-container {
+    perspective: 1000px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 500px;
+  height: 750px;
+  margin: 16px;
+  display: block;
+}
+
+.flip-toggle {
+  display: none;
+}
+
+
+.contact-card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 500ms;
+    transform-style: preserve-3d;
+}
+
+.flip-toggle:checked + .contact-card {
+  transform: rotateY(180deg);
+}
+
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px var(--dark-color) solid;
+  border-radius: 16px;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: var(--mid-color);
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.front h3, .front p{
+  color: var(--light-color);
+}
+
+.back {
+  background-color: var(--light-color);
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+}
+
+.input-field {
+  width: 100%; /* Container width minus padding */
+  min-width: 100%; /* Set your desired minimum width here */
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.input-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.input-row .input-field{
+    width: 50%;
+    min-width: 50%;
+}
+
+.textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+</style>
