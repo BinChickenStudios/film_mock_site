@@ -1,6 +1,8 @@
+
+
 :root{
-    --type-font: "lato", sans-serif;
-    --title-font: "barge", sans-serif;
+    --type-font: "Gilroy", sans-serif;
+    --title-font: "Gilroy", sans-serif;
     
     --dark-color: #152428;
     --mid-color: #6F7C8D;
@@ -15,12 +17,16 @@ html{
     background-color: var(--light-color);
     color: var(--mid-color);
     font-size: var(--text-size);
+    font-weight: 500;
+    font-style: normal;
     font-family: var(--type-font);
 }
 
 *{
     font-family: var(--type-font);
     font-size: var(--text-size);
+    font-weight: 500;
+    font-style: normal;
     color: var(--mid-color);
     text-decoration: none;
 }
@@ -34,6 +40,8 @@ h1, h1 span, h2, h2 span, h3, h3 span, h4, h4 span, h5, h5 span, h6, h6 span{
     color: var(--dark-color);
     font-size: clamp(var(--title-size), var(--text-size), var(--title-max));
     font-family: var(--title-font);
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
 }
 
@@ -120,3 +128,6 @@ img{
     text-transform: uppercase;
 }
 
+.title {
+    text-transform: uppercase;
+}

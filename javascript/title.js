@@ -1,8 +1,8 @@
 import { changeText, highlightFirstLetterInWords, highlightText } from "./utils/text.js";
 
 const traits = [
-    'Craftsmanship', 
-    'Mastery', 
+    'Cinematic', 
+    'Modernistic', 
     'Precision', 
     'Cine Manuel'
 ];
@@ -59,6 +59,6 @@ if (!titleText) {
     aboutIndex = {index: 0};
     changeTitle(titleText, traits, titleIndex);
     changeTitle(aboutText, identities, aboutIndex);
-    setInterval(() => changeTitle(titleText, traits, titleIndex), 3000);
-    setInterval(() => changeTitle(aboutText, identities, aboutIndex), 3000);
+    setInterval(() => changeTitle(titleText, traits, titleIndex), 3500);
+    setInterval(() => changeTitle(aboutText, identities, aboutIndex), 3500);
 }

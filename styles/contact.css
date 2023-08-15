@@ -5,8 +5,8 @@
 }
 
 .contact-card-container {
-    position: relative;
-    perspective: 1000px;
+  position: relative;
+  perspective: 1000px;
   min-width: 300px;
   min-height: 300px;
   height: 600px;
@@ -21,6 +21,9 @@
   display: none;
 }
 
+.flip-toggle:checked{
+  pointer-events: none;
+}
 
 .contact-card{
     width: 100%;
@@ -32,6 +35,7 @@
 
 .flip-toggle:checked + .contact-card {
   transform: rotateY(180deg);
+  pointer-events: none;
 }
 
 
@@ -54,6 +58,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  pointer-events: all;
 }
 
 .front h3, .front p{
@@ -68,8 +73,8 @@
 }
 
 .input-field {
-  width: 100%; /* Container width minus padding */
-  min-width: 100%; /* Set your desired minimum width here */
+  width: 100%; 
+  min-width: 100%; 
   padding: 5px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -88,5 +93,5 @@
 }
 
 .textarea {
-  resize: vertical; /* Allow vertical resizing of the textarea */
+  resize: vertical; 
 }

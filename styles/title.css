@@ -28,7 +28,7 @@
 
     .title-text {
         color: var(--mid-color);
-        font-size: 1em;
+        font-size: 1.5em;
         font-family: "lato", sans-serif;
         text-transform: uppercase;
         letter-spacing: 6px;
@@ -38,10 +38,10 @@
     .title-name, .about-name{
         margin: 0;
         color: var(--mid-color);
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: 8px;
         backdrop-filter: blur(0);
-        animation: textChange 3000ms infinite;
+        animation: textChange 3500ms infinite;
     }
 
     @keyframes textChange {
