@@ -36,6 +36,10 @@ body{
     width: 100%;
 }
 
+p{
+    vertical-align: middle;
+}
+
 h1, h1 span, h2, h2 span, h3, h3 span, h4, h4 span, h5, h5 span, h6, h6 span{
     color: var(--dark-color);
     font-size: clamp(var(--title-size), var(--text-size), var(--title-max));
@@ -43,6 +47,7 @@ h1, h1 span, h2, h2 span, h3, h3 span, h4, h4 span, h5, h5 span, h6, h6 span{
     font-weight: bold;
     font-style: italic;
     text-align: center;
+    vertical-align: middle;
 }
 
 h6{
@@ -98,7 +103,7 @@ button:active, input[type="submit"]:active{
     transform: translateY(2px);
 }
 
-div, section, article, figure{
+div, section, article, figure, header{
     display: flex;
     flex-direction: column;
 }

@@ -12,6 +12,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        vertical-align: middle;
         transition: height 300ms ease;
     }
 

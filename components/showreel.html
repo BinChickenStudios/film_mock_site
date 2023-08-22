@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/cinemanuel/CM_Logo_Icon 128x128.png" type="image/png">
+    <link rel="stylesheet" href="https://use.typekit.net/cty1qev.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gky2lwc.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>Showreel Mockup</title>
+</head>
+<body>
+    <main>
+        <section id="other">
+            <h3>Welcome</h3>
+        </section>
+        <section id="showreel" class="overlay">
+            <div class="showreel-container">
+                <video class="showreel-video" src="../assets/test/videos/naruto.mp4" autoplay loop muted></video>
+                <h5>Showreel</h5>
+                <p>this is a showreel</p>
+            </div>
+        </section>
+        <section id="finish">
+            <h3>Goodbye</h3>
+        </section>
+    </main>
+</body>
+
+<style>
+    #other{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+    }
+
+    #showreel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: none;
+    }
+
+    #showreel.overlay{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #showreel.sticky{
+        position: sticky;
+    }
+    
+    .showreel-container{
+        width: 100%;
+        height: auto;
+    }
+
+    .showreel-video{
+        width: auto;
+        height: auto;
+    }
+</style>
+<script>
+document.addEventListener("scroll", function() {
+    const showreel = document.getElementById('showreel');
+    const titleHeight = document.getElementById('other').offsetHeight;
+    const scrollY = window.scrollY;    
+});
+</script>
